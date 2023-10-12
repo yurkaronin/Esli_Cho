@@ -1,0 +1,29 @@
+@import "base/fonts";
+@import "base/root";
+
+@import "base/global";
+
+@import "blocks/visually-hidden";
+@import "blocks/button";
+@import "blocks/wrapper";
+@import "blocks/title";
+@import "blocks/text";
+@import "blocks/logotype";
+@import "blocks/phone";
+@import "blocks/header-group";
+
+@import "sections/header";
+
+@import "sections/navigation";
+@import "sections/home-screen";
+@import "sections/services";
+@import "sections/prices";
+@import "sections/sale";
+@import "sections/advantages";
+@import "sections/contacts";
+@import "sections/map";
+@import "sections/modal";
+
+@import "sections/map";
+
+@import "activity/scroll";

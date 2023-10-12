@@ -1,0 +1,19 @@
+.header {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 10px 0 12px;
+  &__grid {
+    display: grid;
+    align-items: center;
+    gap: 37px;
+    grid-template-columns: 5fr 4fr 3fr;
+  }
+  .button {
+    padding: 16px 35px;
+    font-size: 0.87em;
+    margin-left: auto;
+  }
+  .phone {
+    margin-left: auto;
+  }
+}

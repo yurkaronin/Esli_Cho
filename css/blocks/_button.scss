@@ -1,0 +1,79 @@
+.button {
+  text-decoration: none;
+  padding: 23px 35px;
+  cursor: pointer;
+  position: relative;
+  outline: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  border: none;
+
+  border-radius: 65px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    background-color: var(--orange);
+    z-index: 0;
+    border-radius: 65px;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+    font-style: normal;
+    font-family: var(--OpenSans);
+    line-height: initial;
+    color: var(--white);
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: center;
+  }
+  svg {
+    position: relative;
+    z-index: 2;
+  }
+
+  &--mod {
+    color: var(--white);
+    &::before {
+      background-color: var(--black);
+    }
+  }
+
+  &:hover::before {
+    left: -4px;
+    top: -4px;
+    bottom: -4px;
+    right: -4px;
+  }
+
+  &--to-top {
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    display: flex;
+    max-width: 60px;
+    img {
+      display: block;
+      flex-shrink: 0;
+      position: relative;
+      pointer-events: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+  }
+}

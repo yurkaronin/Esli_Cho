@@ -1,0 +1,15 @@
+.logotype {
+  display: flex;
+  align-items: center;
+  max-width: 446px;
+  &__image {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+  }
+  &__text {
+    margin: 0;
+    margin-left: 38px;
+    font-size: 0.8em;
+  }
+}
