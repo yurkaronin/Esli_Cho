@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" id="anchor-header">
 
 <head>
   <meta charset="UTF-8">
@@ -29,9 +29,11 @@
 
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+  <!-- Стили для темной темы, которые применяются только если у пользователя установлена темная тема -->
+  <link rel="stylesheet" href="./css/dark-theme.css" media="(prefers-color-scheme: dark)">
 </head>
 
-<body id="anchor-header">
+<body>
   <div class="header-group">
     <header class="header">
       <div class="wrapper">
@@ -471,7 +473,7 @@
     <form action="">
       <input type="text" name="user-name" placeholder="Ваше имя">
       <input type="tel" name="user-tel" placeholder="Ваше номер телефона">
-      <textarea name="" cols="30" rows="1" placeholder="Опишите какая у вас неполадка с устройством..."></textarea>
+      <textarea name="user-message" cols="30" rows="1" placeholder="Опишите какая у вас неполадка с устройством..."></textarea>
       <p>Нажимая на кнопку, вы соглашаетесь на обработку персональных данных</p>
       <button class="button"><span>Получить скидку</span></button>
     </form>
