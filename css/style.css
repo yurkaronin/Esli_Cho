@@ -151,6 +151,13 @@ input[type=radio].visually-hidden {
   max-width: -moz-max-content;
   max-width: max-content;
   border: none;
+  font-style: normal;
+  font-family: var(--OpenSans);
+  line-height: initial;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
   border-radius: 65px;
 }
 .button::before {
@@ -169,13 +176,6 @@ input[type=radio].visually-hidden {
 .button span {
   position: relative;
   z-index: 2;
-  font-style: normal;
-  font-family: var(--OpenSans);
-  line-height: initial;
-  color: var(--white);
-  font-size: 0.9em;
-  font-weight: 600;
-  text-align: center;
 }
 .button svg {
   position: relative;
@@ -209,9 +209,57 @@ input[type=radio].visually-hidden {
   position: relative;
   pointer-events: none;
 }
+.button-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--white);
+  width: 52px;
+  height: 52px;
+  border: none;
+  padding: 0;
+  max-width: initial;
+  max-height: initial;
+  min-height: initial;
+  border-radius: 50px;
+  background-color: transparent;
+}
+.button-menu::before {
+  background: var(--black);
+  border-radius: 50px;
+}
+.button-menu span, .button-menu span::after, .button-menu span::before {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--white);
+}
+.button-menu span::after, .button-menu span::before {
+  content: "";
+  display: block;
+  transition: 0.3s;
+}
+.button-menu span::before {
+  transform: translateY(-8px);
+}
+.button-menu span::after {
+  transform: translateY(8px);
+}
+.button-menu.isActive span {
+  height: 0;
+}
+.button-menu.isActive span:before {
+  transform: rotate(-45deg);
+}
+.button-menu.isActive span:after {
+  transform: rotate(45deg);
+}
+
 .wrapper {
-  max-width: 1260px;
-  padding-inline: 50px;
+  max-width: 1280px;
+  padding-inline: 60px;
   width: 100%;
   margin: 0 auto;
 }
@@ -230,11 +278,11 @@ input[type=radio].visually-hidden {
 .title {
   display: block;
   margin-top: 0;
-  margin-bottom: 0.9em;
+  margin-bottom: 30px;
   position: relative;
   text-align: center;
   color: var(--black);
-  font-size: 1.9em;
+  font-size: 34px;
   font-weight: 300;
 }
 .title span {
@@ -262,6 +310,11 @@ input[type=radio].visually-hidden {
   margin-left: 38px;
   font-size: 0.8em;
 }
+@media (max-width: 1199px) {
+  .logotype__text {
+    margin-left: 20px;
+  }
+}
 
 .phone {
   display: flex;
@@ -269,17 +322,54 @@ input[type=radio].visually-hidden {
   font-weight: 700;
   text-transform: uppercase;
 }
-.phone::before {
-  content: "";
-  display: block;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.6074 16.5068C1.59322 14.4874 0.46369 11.75 0.466521 8.89498C0.469353 6.03995 1.60431 3.30033 3.62251 1.27691C4.22637 0.673049 5.0449 0.333329 5.89804 0.332483C6.75117 0.331637 7.56903 0.669733 8.1717 1.2724C8.30029 1.39904 8.41609 1.53805 8.51742 1.68741C8.62063 1.82656 8.70992 1.97553 8.78399 2.13218C8.83661 2.24184 8.85966 2.36339 8.85086 2.48481C8.84207 2.60623 8.80174 2.72332 8.73386 2.82449L6.44082 6.47106C6.37845 6.56991 6.29234 6.65162 6.19037 6.70873C6.08839 6.76584 5.97378 6.79653 5.85701 6.79799C5.7235 6.80307 5.71361 6.80308 4.78922 6.51226C4.20624 8.06838 4.20104 9.78101 4.77455 11.3384C5.7094 11.0457 5.71929 11.0457 5.85279 11.0505C5.96956 11.0517 6.08411 11.0822 6.18597 11.1391C6.28784 11.196 6.37378 11.2775 6.43595 11.3763L8.72177 15.0183C8.78444 15.1189 8.82044 15.2339 8.82638 15.3524C8.83232 15.4709 8.808 15.5891 8.75571 15.6957C8.67992 15.8549 8.59042 16.0072 8.48824 16.1509C8.38372 16.2952 8.26784 16.4309 8.1417 16.5567C7.53132 17.1489 6.71193 17.476 5.86241 17.4666C5.01289 17.4573 4.20223 17.1122 3.6074 16.5068Z' fill='white'/%3e%3c/svg%3e ");
+.phone__icon {
   width: 15px;
   height: 15px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-right: 7px;
+  transition: all 0.3s;
+}
+.phone__text {
+  margin-left: 7px;
+}
+.phone:hover .phone__icon {
+  animation: shake 0.5s ease-in-out infinite;
+}
+@media (max-width: 1023px) {
+  .phone {
+    width: 52px;
+    height: 52px;
+    border-radius: 50px;
+    background: var(--black);
+    justify-content: center;
+  }
+  .phone__text {
+    display: none;
+  }
+  .phone__icon {
+    width: 20px;
+    height: 20px;
+  }
+  .phone:hover .phone__icon {
+    animation: none;
+  }
 }
 
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
 .header-group {
   transition: all 0.3s;
   position: fixed;
@@ -294,24 +384,57 @@ input[type=radio].visually-hidden {
   color: var(--white);
   padding: 10px 0 12px;
 }
-.header__grid {
-  display: grid;
+.header__flex {
+  display: flex;
   align-items: center;
-  gap: 37px;
-  grid-template-columns: 5fr 4fr 3fr;
+  justify-content: space-between;
 }
-.header .button {
-  padding: 16px 35px;
-  font-size: 0.87em;
-  margin-left: auto;
+.header__callback {
+  padding: 16px 20px;
+  font-size: 14px;
+  margin-left: 40px;
+  max-width: 265px;
+  width: 100%;
+}
+.header .button-menu {
+  display: none;
+}
+.header .logotype {
+  max-width: 450px;
+  width: 100%;
 }
 .header .phone {
   margin-left: auto;
+  max-width: 175px;
+  flex-shrink: 0;
+}
+@media (max-width: 1199px) {
+  .header__callback {
+    max-width: 250px;
+    margin-left: 17px;
+  }
+}
+@media (max-width: 1023px) {
+  .header__callback {
+    display: none;
+  }
+  .header .button-menu {
+    display: flex;
+    margin-left: 20px;
+  }
+  .header .phone {
+    max-width: initial;
+  }
+}
+
+.main {
+  margin-top: 70px;
 }
 
 .navigation {
   border-bottom: 1px solid var(--blue);
   transition: all 0.3s;
+  background-color: rgba(0, 0, 0, 0.2392156863);
 }
 .navigation__list {
   list-style: none;
@@ -350,11 +473,42 @@ input[type=radio].visually-hidden {
   width: 100%;
   background-color: var(--blue2);
 }
+.navigation__title {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 0px 0px 0px 20px;
+    background: var(--white);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    display: none;
+  }
+  .navigation__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navigation__title {
+    display: block;
+    color: var(--black);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 7px;
+    margin-bottom: 40px;
+  }
+  .navigation .wrapper {
+    padding: 10px 30px 43px;
+  }
+}
 
 .home-screen {
   background: url(../img/home-screen-bg.jpg);
   background-repeat: no-repeat;
-  background-position: right top -10px;
+  background-position: right top;
   background-size: cover;
   color: var(--white);
   padding-top: 190px;
@@ -392,11 +546,21 @@ input[type=radio].visually-hidden {
   font-weight: 800;
   font-size: 40px;
   text-align: left;
+  margin-bottom: 40px;
 }
 .home-screen .title span {
   display: initial;
   color: var(--blue);
   font-weight: inherit;
+}
+@media (max-width: 1399px) {
+  .home-screen {
+    background: url(../img/home-screen-bg-1199.jpg);
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+  }
 }
 
 .modal .title {
@@ -425,5 +589,23 @@ input[type=radio].visually-hidden {
 .scroll .navigation__link:hover::after,
 .scroll .navigation__link:hover::after {
   width: 100%;
+  background-color: var(--white);
+}
+@media (max-width: 1023px) {
+  .scroll .navigation__link:hover,
+  .scroll .navigation__link:hover,
+  .scroll .navigation__link:hover {
+    color: var(--black);
+  }
+  .scroll .navigation__link:hover::after,
+  .scroll .navigation__link:hover::after,
+  .scroll .navigation__link:hover::after {
+    width: 100%;
+    background-color: var(--black);
+  }
+}
+
+.menu-open .navigation {
+  display: block;
   background-color: var(--white);
 }/*# sourceMappingURL=style.css.map */

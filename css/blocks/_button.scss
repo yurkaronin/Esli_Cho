@@ -10,7 +10,13 @@
   justify-content: center;
   max-width: max-content;
   border: none;
-
+  font-style: normal;
+  font-family: var(--OpenSans);
+  line-height: initial;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
   border-radius: 65px;
 
   &::before {
@@ -30,13 +36,6 @@
   span {
     position: relative;
     z-index: 2;
-    font-style: normal;
-    font-family: var(--OpenSans);
-    line-height: initial;
-    color: var(--white);
-    font-size: 0.9em;
-    font-weight: 600;
-    text-align: center;
   }
   svg {
     position: relative;

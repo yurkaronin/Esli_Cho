@@ -1,8 +1,7 @@
 .home-screen {
-  // background: url(../img/home-screen-bg.png), linear-gradient(77deg, #06090E 52.7%, #162836 72.15%, #2C3B44 83.31%);
   background: url(../img/home-screen-bg.jpg);
   background-repeat: no-repeat;
-  background-position: right top -10px;
+  background-position: right top;
   background-size: cover;
   color: var(--white);
   padding-top: 190px;
@@ -26,7 +25,7 @@
     &::before {
       margin-top: 6px;
       flex-shrink: 0;
-      content: '';
+      content: "";
       display: block;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='9' viewBox='0 0 9 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.49996 -0.000171C6.98528 -0.000171 9.00001 2.01467 9.00001 4.49993C9.00001 6.98519 6.98528 9.00004 4.49996 9.00004C2.01477 9.00004 2.7e-05 6.98519 2.7e-05 4.49993C2.7e-05 2.01467 2.01477 -0.000171 4.49996 -0.000171Z' fill='%232052C9'/%3e%3c/svg%3e ");
       width: 9px;
@@ -40,10 +39,19 @@
     font-weight: 800;
     font-size: 40px;
     text-align: left;
+    margin-bottom: 40px;
     span {
       display: initial;
       color: var(--blue);
       font-weight: inherit;
     }
+  }
+
+  @media (max-width: 1399px) {
+    background: url(../img/home-screen-bg-1199.jpg);
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
   }
 }

@@ -1,0 +1,51 @@
+.button-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--white);
+  width: 52px;
+  height: 52px;
+  border: none;
+  padding: 0;
+  max-width: initial;
+  max-height: initial;
+  min-height: initial;
+  border-radius: 50px;
+  background-color: transparent;
+
+  &::before {
+    background: var(--black);
+    border-radius: 50px;
+  }
+  & span,
+  & span::after,
+  & span::before {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: var(--white);
+  }
+  & span::after,
+  & span::before {
+    content: "";
+    display: block;
+    transition: 0.3s;
+  }
+  & span::before {
+    transform: translateY(-8px);
+  }
+  & span::after {
+    transform: translateY(8px);
+  }
+  &.isActive span {
+    height: 0;
+  }
+  &.isActive span:before {
+    transform: rotate(-45deg);
+  }
+  &.isActive span:after {
+    transform: rotate(45deg);
+  }
+}

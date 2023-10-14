@@ -2,18 +2,49 @@
   background-color: var(--blue);
   color: var(--white);
   padding: 10px 0 12px;
-  &__grid {
-    display: grid;
+  &__flex {
+    display: flex;
     align-items: center;
-    gap: 37px;
-    grid-template-columns: 5fr 4fr 3fr;
+    justify-content: space-between;
   }
-  .button {
-    padding: 16px 35px;
-    font-size: 0.87em;
-    margin-left: auto;
+  &__callback {
+    padding: 16px 20px;
+    font-size: 14px;
+    margin-left: 40px;
+    max-width: 265px;
+    width: 100%;
+  }
+  .button-menu {
+    display: none;
+  }
+  .logotype {
+    max-width: 450px;
+    width: 100%;
   }
   .phone {
     margin-left: auto;
+    max-width: 175px;
+    flex-shrink: 0;
   }
+
+
+  @media (max-width: 1199px) {
+    &__callback {
+      max-width: 250px;
+      margin-left: 17px;
+    }
+  }
+  @media (max-width: 1023px) {
+    &__callback {
+      display: none;
+    }
+    .button-menu {
+      display: flex;
+      margin-left: 20px;
+    }
+    .phone {
+      max-width: initial;
+    }
+  }
+
 }

@@ -43,26 +43,37 @@ document.addEventListener("DOMContentLoaded", () => {
   var navLinks = document.querySelectorAll(".navigation__link");
 
   // Добавление обработчика событий на каждую ссылку
-  navLinks.forEach(function(link) {
-      link.addEventListener("click", function(e) {
-          e.preventDefault();  // Предотвращение стандартного действия ссылки
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();  // Предотвращение стандартного действия ссылки
 
-          // Получение целевого элемента, к которому нужно прокрутить
-          var targetId = this.getAttribute("href").substring(1);  // Получение id без "#"
-          var targetElement = document.getElementById(targetId);
+      // Получение целевого элемента, к которому нужно прокрутить
+      var targetId = this.getAttribute("href").substring(1);  // Получение id без "#"
+      var targetElement = document.getElementById(targetId);
 
-          // Вычисление позиции прокрутки
-          var scrollTo = targetElement.offsetTop - headerHeight;
+      // Вычисление позиции прокрутки
+      var scrollTo = targetElement.offsetTop - headerHeight;
 
-          // Прокрутка к целевому элементу с учетом высоты шапки
-          window.scrollTo({
-              top: scrollTo,
-              behavior: "smooth"
-          });
+      // Прокрутка к целевому элементу с учетом высоты шапки
+      window.scrollTo({
+        top: scrollTo,
+        behavior: "smooth"
       });
+    });
+  });
+
+  // показ мобильного меню и кнопки
+  const buttonMenu = document.querySelector('.button-menu');
+  const navigation = document.querySelector('.navigation');
+  buttonMenu.addEventListener('click', function () {
+    buttonMenu.classList.toggle('isActive');
+    navigation.classList.toggle('isActive');
+    document.body.classList.toggle('menu-open');
   });
 
 });
+
+
 
 // техническая часть - УДАЛИТЬ НА ПРОДАКШЕНЕ!
 // получить в консоли элемент, по которому кликнули

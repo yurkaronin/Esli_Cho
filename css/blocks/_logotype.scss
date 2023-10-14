@@ -12,4 +12,9 @@
     margin-left: 38px;
     font-size: 0.8em;
   }
+  @media (max-width: 1199px) {
+    &__text {
+      margin-left: 20px;
+    }
+  }
 }

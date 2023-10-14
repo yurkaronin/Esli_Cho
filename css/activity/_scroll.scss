@@ -15,4 +15,15 @@
       background-color: var(--white);
     }
   }
+  @media (max-width: 1023px) {
+    .navigation__link:hover,
+    .navigation__link:hover,
+    .navigation__link:hover {
+      color: var(--black);
+      &::after {
+        width: 100%;
+        background-color: var(--black);
+      }
+    }
+  }
 }
