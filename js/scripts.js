@@ -59,6 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
         top: scrollTo,
         behavior: "smooth"
       });
+      // Скрытие меню при клике на якорную ссылку
+      navigation.classList.remove('isActive');
+      buttonMenu.classList.remove('isActive');
+      document.body.classList.remove('menu-open');
     });
   });
 

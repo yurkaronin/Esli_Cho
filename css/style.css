@@ -225,6 +225,7 @@ input[type=radio].visually-hidden {
   min-height: initial;
   border-radius: 50px;
   background-color: transparent;
+  flex-shrink: 0;
 }
 .button-menu::before {
   background: var(--black);
@@ -326,6 +327,7 @@ input[type=radio].visually-hidden {
   width: 15px;
   height: 15px;
   transition: all 0.3s;
+  pointer-events: none;
 }
 .phone__text {
   margin-left: 7px;
@@ -426,6 +428,18 @@ input[type=radio].visually-hidden {
     max-width: initial;
   }
 }
+@media (max-width: 767px) {
+  .header .logotype {
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+  .header .logotype__text {
+    display: none;
+  }
+  .header .button-menu {
+    margin-left: 10px;
+  }
+}
 
 .main {
   margin-top: 70px;
@@ -485,7 +499,10 @@ input[type=radio].visually-hidden {
     background: var(--white);
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
     border-bottom: none;
-    display: none;
+    background-color: var(--white) !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
   }
   .navigation__list {
     flex-direction: column;
@@ -562,6 +579,48 @@ input[type=radio].visually-hidden {
     background-size: cover;
   }
 }
+@media (max-width: 1023px) {
+  .home-screen {
+    background: url(../img/home-screen-bg-768.jpg);
+    padding-bottom: 60px;
+    padding-top: 55px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+  }
+  .home-screen .title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .home-screen {
+    padding-top: 45px;
+    padding-bottom: 60px;
+  }
+  .home-screen__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+  .home-screen__item {
+    font-size: 14px;
+  }
+  .home-screen .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .home-screen .title br {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .home-screen {
+    background: url(../img/home-screen-bg-375.jpg);
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+  }
+}
 
 .modal .title {
   font-weight: 700;
@@ -606,6 +665,6 @@ input[type=radio].visually-hidden {
 }
 
 .menu-open .navigation {
-  display: block;
-  background-color: var(--white);
+  opacity: 1;
+  visibility: initial;
 }/*# sourceMappingURL=style.css.map */

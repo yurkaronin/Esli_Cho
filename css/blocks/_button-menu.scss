@@ -14,6 +14,7 @@
   min-height: initial;
   border-radius: 50px;
   background-color: transparent;
+  flex-shrink: 0;
 
   &::before {
     background: var(--black);

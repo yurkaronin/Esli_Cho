@@ -27,7 +27,6 @@
     flex-shrink: 0;
   }
 
-
   @media (max-width: 1199px) {
     &__callback {
       max-width: 250px;
@@ -46,5 +45,15 @@
       max-width: initial;
     }
   }
-
+  @media (max-width: 767px) {
+    .logotype {
+      max-width: max-content;
+    }
+    .logotype__text {
+      display: none;
+    }
+    .button-menu {
+      margin-left: 10px;
+  }
+  }
 }
