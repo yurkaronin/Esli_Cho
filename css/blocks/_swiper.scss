@@ -1,0 +1,15 @@
+.swiper {
+  .swiper-pagination-bullet {
+    background: var(--orange);
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 7.5px !important;
+    &:hover {
+      background: var(--orange2);
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background: var(--black) !important;
+  }
+}

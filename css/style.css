@@ -63,6 +63,7 @@
   --black: #121212;
   --white: #ffffff;
   --orange: #FA8315;
+  --orange2: #FF993A;
   --blue: #2052C9;
   --blue2: #5E8DFF;
   --text-sz: 18px;
@@ -381,6 +382,43 @@ input[type=radio].visually-hidden {
   z-index: 10;
 }
 
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 1023px) {
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.brands-logo {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper .swiper-pagination-bullet {
+  background: var(--orange);
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 7.5px !important;
+}
+.swiper .swiper-pagination-bullet:hover {
+  background: var(--orange2);
+}
+.swiper .swiper-pagination-bullet-active {
+  background: var(--black) !important;
+}
+
 .header {
   background-color: var(--blue);
   color: var(--white);
@@ -553,9 +591,10 @@ input[type=radio].visually-hidden {
   flex-shrink: 0;
   content: "";
   display: block;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='9' viewBox='0 0 9 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.49996 -0.000171C6.98528 -0.000171 9.00001 2.01467 9.00001 4.49993C9.00001 6.98519 6.98528 9.00004 4.49996 9.00004C2.01477 9.00004 2.7e-05 6.98519 2.7e-05 4.49993C2.7e-05 2.01467 2.01477 -0.000171 4.49996 -0.000171Z' fill='%232052C9'/%3e%3c/svg%3e ");
+  background-color: var(--blue);
   width: 9px;
   height: 9px;
+  border-radius: 50%;
   margin-right: 13px;
 }
 .home-screen .title {
@@ -620,6 +659,11 @@ input[type=radio].visually-hidden {
     background-position: right top;
     background-size: cover;
   }
+}
+
+.services .swiper {
+  margin-bottom: 34px;
+  padding-bottom: 26px;
 }
 
 .modal .title {

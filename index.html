@@ -28,9 +28,10 @@
   <link rel="preload" href="./fonts/OpenSans/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="libs/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <!-- Стили для темной темы, которые применяются только если у пользователя установлена темная тема -->
-  <link rel="stylesheet" href="./css/dark-theme.css" media="(prefers-color-scheme: dark)">
+  <!-- <link rel="stylesheet" href="./css/dark-theme.css" media="(prefers-color-scheme: dark)"> -->
 </head>
 
 <body>
@@ -43,10 +44,14 @@
             <p class="logotype__text">Сервисный центр по ремонту мобильной техники в Краснодаре</p>
           </div>
           <a href="tel:89002680808" class="phone">
-            <svg class="phone__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" fill="none"><path fill="#fff" d="M11.689 14.883a10.762 10.762 0 0 1-7.617-3.128A10.805 10.805 0 0 1 .882 4.15a3.223 3.223 0 0 1 .932-2.281A3.21 3.21 0 0 1 4.082.916c.18-.002.36.014.538.047.172.025.34.066.504.124a.699.699 0 0 1 .456.523l.976 4.195a.701.701 0 0 1-.179.645c-.09.099-.097.106-.954.557a6.93 6.93 0 0 0 3.417 3.408c.45-.87.457-.877.554-.968a.698.698 0 0 1 .642-.185l4.196.94a.698.698 0 0 1 .505.453 3.05 3.05 0 0 1 .18 1.042 3.223 3.223 0 0 1-.959 2.26 3.21 3.21 0 0 1-2.269.926Z"/></svg>
+            <svg class="phone__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" fill="none">
+              <path fill="#fff"
+                d="M11.689 14.883a10.762 10.762 0 0 1-7.617-3.128A10.805 10.805 0 0 1 .882 4.15a3.223 3.223 0 0 1 .932-2.281A3.21 3.21 0 0 1 4.082.916c.18-.002.36.014.538.047.172.025.34.066.504.124a.699.699 0 0 1 .456.523l.976 4.195a.701.701 0 0 1-.179.645c-.09.099-.097.106-.954.557a6.93 6.93 0 0 0 3.417 3.408c.45-.87.457-.877.554-.968a.698.698 0 0 1 .642-.185l4.196.94a.698.698 0 0 1 .505.453 3.05 3.05 0 0 1 .18 1.042 3.223 3.223 0 0 1-.959 2.26 3.21 3.21 0 0 1-2.269.926Z" />
+            </svg>
             <span class="phone__text">8 (900) 268-08-08</span>
           </a>
-          <a href="#modal-call-back" class="header__callback button button--mod"><span>Заказать обратный звонок</span></a>
+          <a href="#modal-call-back" class="header__callback button button--mod"><span>Заказать обратный
+              звонок</span></a>
           <button class="button-menu button" type="button">
             <span class="button-menu__toggle"></span>
           </button>
@@ -83,7 +88,8 @@
       <div class="wrapper">
         <h1 class="title">Профессиональный ремонт<br>
           телефонов, смартфонов, iPhone<br>
-          <span>от 350 рублей</span> без предоплат и выходных</h1>
+          <span>от 350 рублей</span> без предоплат и выходных
+        </h1>
         <ul class="home-screen__list">
           <li class="home-screen__item">На 100% точная диагностика – подтверждает независимая экспертиза</li>
           <li class="home-screen__item">Без подорожания по итогу работы</li>
@@ -94,74 +100,90 @@
       </div>
     </section>
 
-    <section class="services" id="anchor-services">
-      <h2 class="title"><span>Ремонтируем смартфоны любых брендов</span> Быстро. С первого раза. С гарантией</h2>
-      <ul>
-        <li><img src="./img/brands/1.jpg" alt="Логотип Asus" width="215"></li>
-        <li><img src="./img/brands/2.jpg" alt="Логотип Samsung" width="215"></li>
-        <li><img src="./img/brands/3.jpg" alt="Логотип Microsoft" width="215"></li>
-        <li><img src="./img/brands/4.jpg" alt="Логотип Apple" width="215"></li>
-        <li><img src="./img/brands/5.jpg" alt="Логотип Nokia" width="215"></li>
-      </ul>
-      <p class="text">Опасаетесь, что дорогую деталь заменят дешевой или вовсе оставят старую?
-        А диагностика окажется некачественной, и телефон придется ремонтировать повторно?
-        Мы работаем профессионально и честно. Доказываем это на практике.
-        Точность диагностики подтвердит любая независимая экспертиза.</p>
-      <p class="text">Показываем и отдаем вам неисправную деталь. Можем провести ремонт при вас.</p>
+    <section class="services section" id="anchor-services">
+      <div class="wrapper">
+        <h2 class="title"><span>Ремонтируем смартфоны любых брендов</span> Быстро. С первого раза. С гарантией</h2>
+        <div class="swiper js-slider-logotype">
+          <ul class="brands-logo swiper-wrapper">
+            <li class="brands-logo__item swiper-slide">
+              <img class="brands-logo__image" src="./img/brands/1.jpg" alt="Логотип Asus" width="215">
+            </li>
+            <li class="brands-logo__item swiper-slide">
+              <img class="brands-logo__image" src="./img/brands/2.jpg" alt="Логотип Samsung" width="215">
+            </li>
+            <li class="brands-logo__item swiper-slide">
+              <img class="brands-logo__image" src="./img/brands/3.jpg" alt="Логотип Microsoft" width="215">
+            </li>
+            <li class="brands-logo__item swiper-slide">
+              <img class="brands-logo__image" src="./img/brands/4.jpg" alt="Логотип Apple" width="215">
+            </li>
+            <li class="brands-logo__item swiper-slide">
+              <img class="brands-logo__image" src="./img/brands/5.jpg" alt="Логотип Nokia" width="215">
+            </li>
+          </ul>
 
-      <ul>
-        <li>Замена камеры <span>Работы от 500 ₽</span>
-          <img src="./img/services/1.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Замена микрофона <span>Работы от 1000 ₽</span>
-          <img src="./img/services/2.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Замена динамика <span>Работы от 1000 ₽</span>
-          <img src="./img/services/3.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Замена аккумулятора <span>Работы от 750 ₽</span>
-          <img src="./img/services/4.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Прошивка, разблокировка <span>Работы от 350 ₽</span>
-          <img src="./img/services/5.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Замена механических кнопок <span>Работы от 500 ₽</span>
-          <img src="./img/services/6.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Ремонт не включающегося устройства <span>Работы от 750 ₽</span>
-          <img src="./img/services/7.jpg" alt="Фото Услуги" width="90">
-        </li>
-      </ul>
+          <div class="swiper-pagination"></div>
+        </div>
+        <p class="text">Опасаетесь, что дорогую деталь заменят дешевой или вовсе оставят старую?
+          А диагностика окажется некачественной, и телефон придется ремонтировать повторно?
+          Мы работаем профессионально и честно. Доказываем это на практике.
+          Точность диагностики подтвердит любая независимая экспертиза.</p>
+        <p class="text">Показываем и отдаем вам неисправную деталь. Можем провести ремонт при вас.</p>
 
-      <img src="./img/services/iphone.png" alt="Фотография Iphone" width="516">
+        <ul>
+          <li>Замена камеры <span>Работы от 500 ₽</span>
+            <img src="./img/services/1.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Замена микрофона <span>Работы от 1000 ₽</span>
+            <img src="./img/services/2.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Замена динамика <span>Работы от 1000 ₽</span>
+            <img src="./img/services/3.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Замена аккумулятора <span>Работы от 750 ₽</span>
+            <img src="./img/services/4.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Прошивка, разблокировка <span>Работы от 350 ₽</span>
+            <img src="./img/services/5.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Замена механических кнопок <span>Работы от 500 ₽</span>
+            <img src="./img/services/6.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Ремонт не включающегося устройства <span>Работы от 750 ₽</span>
+            <img src="./img/services/7.jpg" alt="Фото Услуги" width="90">
+          </li>
+        </ul>
 
-      <ul>
-        <li>Диагностика 0 ₽ <span>при ремонте нашими специалистами</span>
-          <img src="./img/services/8.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Замена дисплея и тачскрина <span>Работы от 1500 ₽</span>
-          <img src="./img/services/9.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Замена сенсорного стекла <span>Работы от 700 ₽</span>
-          <img src="./img/services/10.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Замена корпуса <span>Работы от 1000 ₽</span>
-          <img src="./img/services/11.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Замена задней крышки <span>Работы от 600 ₽</span>
-          <img src="./img/services/12.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Замена, ремонт платы <span>Работы от 1000 ₽</span>
-          <img src="./img/services/13.jpg" alt="Фото Услуги" width="90">
-        </li>
-        <li>Восстановление после попадания влаги <span>Работы от 1000 ₽</span>
-          <img src="./img/services/14.jpg" alt="Фото Услуги" width="90">
-        </li>
-      </ul>
+        <img src="./img/services/iphone.png" alt="Фотография Iphone" width="516">
 
-      <a href="#modal-sign-for-diagnostics" class="button"><span>Записаться на диагностику</span></a>
+        <ul>
+          <li>Диагностика 0 ₽ <span>при ремонте нашими специалистами</span>
+            <img src="./img/services/8.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Замена дисплея и тачскрина <span>Работы от 1500 ₽</span>
+            <img src="./img/services/9.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Замена сенсорного стекла <span>Работы от 700 ₽</span>
+            <img src="./img/services/10.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Замена корпуса <span>Работы от 1000 ₽</span>
+            <img src="./img/services/11.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Замена задней крышки <span>Работы от 600 ₽</span>
+            <img src="./img/services/12.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Замена, ремонт платы <span>Работы от 1000 ₽</span>
+            <img src="./img/services/13.jpg" alt="Фото Услуги" width="90">
+          </li>
+          <li>Восстановление после попадания влаги <span>Работы от 1000 ₽</span>
+            <img src="./img/services/14.jpg" alt="Фото Услуги" width="90">
+          </li>
+        </ul>
+
+        <a href="#modal-sign-for-diagnostics" class="button"><span>Записаться на диагностику</span></a>
+      </div>
     </section>
-    <section class="prices" id="anchor-price">
+    <section class="prices section" id="anchor-price">
       <h2 class="title"><span>Доступные цены</span> на качественный ремонт смартфонов</h2>
       <p class="text">Телефон прослужит долго и еще успеет вам надоесть!</p>
       <ul>
@@ -328,7 +350,7 @@
         </li>
       </ul>
     </section>
-    <section class="sale" id="anchor-sale">
+    <section class="sale section" id="anchor-sale">
       <h2 class="title"><span>Скидка 20%</span> на работы по ремонту телефона</h2>
       <p>Скидка действует только при заявке с сайта</p>
       <form action="">
@@ -338,7 +360,7 @@
         <button class="button"><span>Получить скидку 20%</span></button>
       </form>
     </section>
-    <section class="advantages" id="anchor-advantages">
+    <section class="advantages section" id="anchor-advantages">
       <h2 class="title"><span>8 объективных причин,</span>чтобы отремонтировать телефон у нас</h2>
       <ul>
         <li>
@@ -473,7 +495,8 @@
     <form action="">
       <input type="text" name="user-name" placeholder="Ваше имя">
       <input type="tel" name="user-tel" placeholder="Ваше номер телефона">
-      <textarea name="user-message" cols="30" rows="1" placeholder="Опишите какая у вас неполадка с устройством..."></textarea>
+      <textarea name="user-message" cols="30" rows="1"
+        placeholder="Опишите какая у вас неполадка с устройством..."></textarea>
       <p>Нажимая на кнопку, вы соглашаетесь на обработку персональных данных</p>
       <button class="button"><span>Получить скидку</span></button>
     </form>
@@ -490,7 +513,7 @@
   </section>
   <a href="#anchor-header" class="button button--to-top" title="Перейти в начало страницы"><img
       src="./img/icons/arrow.svg" width="16"></a>
-
+  <script src="libs/swiper-bundle.min.js"></script>
   <script src="./js/scripts.js"></script>
 </body>
 

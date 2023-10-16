@@ -75,6 +75,38 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.toggle('menu-open');
   });
 
+  // слайдер с логотипами
+  const swiper = new Swiper('.js-slider-logotype', {
+    // Optional parameters
+    loop: true,
+    autoplay: {
+      delay: 2500,
+    },
+    slidesPerView: 5,
+    spaceBetween: 21,
+    breakpoints: {
+      // when window width is >= 480px
+      425: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 767px
+      550: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 40
+      }
+    },
+    // If we need pagination
+    pagination: {
+      el: '.js-slider-logotype .swiper-pagination',
+      clickable: true,
+    }
+  });
+
 });
 
 
