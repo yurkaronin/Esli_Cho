@@ -1,3 +1,8 @@
 .prices {
-
+  background-color: var(--gray);
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 }
