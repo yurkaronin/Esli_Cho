@@ -82,11 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
     autoplay: {
       delay: 2500,
     },
-    slidesPerView: 5,
-    spaceBetween: 21,
     breakpoints: {
       // when window width is >= 480px
-      425: {
+      320: {
         slidesPerView: 2,
         spaceBetween: 20
       },
@@ -97,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       768: {
         slidesPerView: 5,
-        spaceBetween: 40
+        spaceBetween: 21
       }
     },
     // If we need pagination

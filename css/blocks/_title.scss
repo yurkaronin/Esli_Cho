@@ -1,15 +1,23 @@
 .title {
   display: block;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   position: relative;
   text-align: center;
-
   color: var(--black);
   font-size: 34px;
   font-weight: 300;
   span {
     font-weight: 700;
     display: block;
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 767px) {
+    font-size: 22px;
+    margin-bottom: 24px;
   }
 }

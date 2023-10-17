@@ -1,4 +1,6 @@
 .swiper {
+  margin-bottom: 40px;
+
   .swiper-pagination-bullet {
     background: var(--orange);
     opacity: 1;
@@ -12,4 +14,13 @@
   .swiper-pagination-bullet-active {
     background: var(--black) !important;
   }
+  @media (max-width: 1023px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 25px;
+    padding-bottom: 30px;
+  }
+
 }
