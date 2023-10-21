@@ -1,3 +1,59 @@
 .sale {
+  background-color: var(--black);
+  color: var(--white);
+  padding-top: 800px;
+  padding-bottom: 120px;
+  &__grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 5fr 7fr;
+  }
+  .title {
+    color: var(--white);
+    text-align: initial;
+    font-size: 34px;
+    span {
+      display: initial;
+    }
+  }
+  .text {
+    text-align: initial;
+    margin: 0;
+  }
 
+  @media (max-width: 1199px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    &__grid {
+      display: grid;
+      gap: 20px 30px;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+    }
+    .title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .text {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 1023px) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+    .title {
+      text-align: center;
+    }
+    .text {
+      text-align: center;
+    }
+  }
+  @media (max-width: 767px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
