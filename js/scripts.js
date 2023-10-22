@@ -105,6 +105,51 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Подключаем янекс карту на сайт
+  if (document.querySelector('.js-map')) {
+    let center = [45.100281810026644, 38.982007807675366];
+
+    function init() {
+      let mapElement = document.querySelector('.js-map');
+      let map = new ymaps.Map(mapElement, {
+        center: center,
+        zoom: 17
+      });
+
+      let placemarRkschool = new ymaps.Placemark([45.100281810026644, 38.982007807675366], {
+        hintContent: 'Сервисный центр',
+        balloonContentHeader: 'Сервисный центр ЕСЛИ ЧЁ',
+        balloonContentFooter: 'Краснодар, Прикубанский округ, ул.Дзержинского, 100в (район ТЦ Красная площадь, напротив KFC)'
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: './img/map/balun.svg',
+        iconImageSize: [42, 56],
+        iconImageOffset: [-19, -44]
+      });
+
+      map.controls.remove('geolocationControl');
+      map.controls.remove('searchControl');
+      map.controls.remove('trafficControl');
+      map.controls.remove('typeSelector');
+      map.behaviors.disable(['scrollZoom']);
+
+      map.geoObjects.add(placemarRkschool);
+
+      if (placemarRkschool && placemarRkschool.events) {
+        placemarRkschool.events.add('mouseenter', function (e) {
+          e.get('target').options.set('iconImageHref', './img/map/balun-hover.svg');
+        });
+
+        placemarRkschool.events.add('mouseleave', function (e) {
+          e.get('target').options.set('iconImageHref', './img/map/balun.svg');
+        });
+      };
+    }
+
+    ymaps.ready(init);
+  };
+
+
 });
 
 

@@ -56,23 +56,12 @@
     right: -4px;
   }
 
-  &--to-top {
-    padding: 0;
-    width: 60px;
-    height: 60px;
-    position: fixed;
-    bottom: 64px;
-    right: 64px;
-    display: flex;
-    max-width: 60px;
-    img {
-      display: block;
-      flex-shrink: 0;
-      position: relative;
-      pointer-events: none;
-    }
+  @media (max-width: 767px) {
+    padding: 20px 30px;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 450px) {
+    max-width: 100%;
+    width: 100%;
   }
 }

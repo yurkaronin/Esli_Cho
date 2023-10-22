@@ -45,6 +45,7 @@
 </head>
 
 <body>
+
   <div class="header-group">
     <header class="header">
       <div class="wrapper">
@@ -495,38 +496,43 @@
 
     </section>
 
-    <section class="contacts" id="anchor-contacts">
-      <h2 class="title"><span>Контакты</span></h2>
-      <ul>
-        <li>
-          <img class="advantages__icon" src="./img/icons/location.svg" width="24">
-          <span>Адрес:</span>
-          <address>Краснодар, Прикубанский округ, ул.Дзержинского, 100в
-            (район ТЦ Красная площадь, напротив KFC)</address>
-        </li>
+    <section class="contacts section" id="anchor-contacts">
+      <div class="wrapper">
+        <h2 class="title"><span>Контакты</span></h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <img class="contacts__icon" src="./img/icons/location.svg" width="24">
+            <span class="contacts__title">Адрес:</span>
+            <address class="contacts__text">Краснодар, Прикубанский округ, ул.Дзержинского, 100в
+              (район ТЦ Красная площадь, напротив KFC)</address>
+          </li>
 
-        <li>
-          <img class="advantages__icon" src="./img/icons/time.svg" width="24">
-          <span>Время работы:</span>
-          без выходных с ПН по ВС, с 9:00-22:00
-        </li>
+          <li class="contacts__item">
+            <img class="contacts__icon" src="./img/icons/time.svg" width="24">
+            <span class="contacts__title">Время работы:</span>
+            <p class="contacts__text">без выходных с ПН по ВС, с 9:00-22:00</p>
+          </li>
 
-        <li>
-          <img src="./img/icons/phone.svg" width="24">
-          <span>Телефон:</span>
-          <a href="tel:+79002680808">+7 (900) 268-08-08</a>
-        </li>
+          <li class="contacts__item">
+            <img class="contacts__icon" src="./img/icons/phone.svg" width="24">
+            <span class="contacts__title">Телефон:</span>
+            <a class="contacts__link" href="tel:+79002680808">+7 (900) 268-08-08</a>
+          </li>
 
-        <li>
-          <img class="advantages__icon" src="./img/icons/email.svg" width="24">
-          <span>Электронная почта:</span>
-          <a href="mailto:servisesliche@gmail.com">servisesliche@gmail.com</a>
-        </li>
-      </ul>
+          <li class="contacts__item">
+            <img class="contacts__icon" src="./img/icons/email.svg" width="24">
+            <span class="contacts__title">Электронная почта:</span>
+            <a class="contacts__link" href="mailto:servisesliche@gmail.com">servisesliche@gmail.com</a>
+          </li>
+        </ul>
+      </div>
     </section>
+
     <section class="map">
-      <img src="./img/map.jpg" alt="карта с адресом сервисного центра"
-        title="Краснодар, Прикубанский округ, ул.Дзержинского, 100в">
+      <img src="./img/map/map.jpg" alt="карта с адресом сервисного центра"
+        title="Краснодар, Прикубанский округ, ул.Дзержинского, 100в" loading="lazy" width="1920">
+      <div class="map__content js-map"></div>
+
     </section>
   </main>
   <footer class="footer">
@@ -590,9 +596,10 @@
       <button class="button"><span>Получить скидку</span></button>
     </form>
   </section>
-  <a href="#anchor-header" class="button button--to-top" title="Перейти в начало страницы"><img
-      src="./img/icons/arrow.svg" width="16"></a>
+  <a href="#anchor-header" class="button to-top" title="Перейти в начало страницы"><img src="./img/icons/arrow.svg"
+      width="16"></a>
   <script src="libs/swiper-bundle.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1dba075a-a65a-4b22-84a2-ebb26f26fe43&lang=ru_RU" type="text/javascript"></script>
   <script src="./js/scripts.js"></script>
 </body>
 

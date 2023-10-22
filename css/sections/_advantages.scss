@@ -1,4 +1,6 @@
 .advantages {
+  background-color: var(--gray);
+  padding-bottom: 0;
   &__main {
     margin-bottom: 60px;
   }
@@ -51,5 +53,43 @@
     font-size: 34px;
     font-weight: 700;
     margin: 0;
+  }
+  @media (max-width: 1023px) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__icon {
+      margin-bottom: 24px;
+    }
+    &__title {
+      font-size: 28px;
+    }
+  }
+  @media (max-width: 767px) {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    &__footer {
+      background-color: var(--black);
+      color: var(--white);
+      padding: 26px 0 40px;
+    }
+    &__flex {
+      background-color: transparent;
+      border-radius: initial;
+      box-shadow: none;
+      padding: initial;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    &__title {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
   }
 }

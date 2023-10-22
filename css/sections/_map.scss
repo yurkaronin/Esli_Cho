@@ -1,3 +1,33 @@
 .map {
+  height: 400px;
+  position: relative;
+  img {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    position: absolute;
+    z-index: 0;
+  }
+  &__content {
+    position: relative;
+    z-index: 10;
+    height: 400px;
+    width: 100%;
+  }
+  [class*="copyrights-pane"] {
+    display: none !important;
+  }
 
+  @media (max-width: 767px) {
+    height: 320px;
+
+    iframe {
+      height: 320px;
+    }
+    .ymaps-2-1-79-balloon__content {
+      max-width: 300px;
+    }
+  }
 }
