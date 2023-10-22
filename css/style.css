@@ -1228,9 +1228,6 @@ input[type=radio].visually-hidden {
   .map iframe {
     height: 320px;
   }
-  .map .ymaps-2-1-79-balloon__content {
-    max-width: 300px;
-  }
 }
 
 .modal .title {
@@ -1273,9 +1270,6 @@ input[type=radio].visually-hidden {
   }
   .map iframe {
     height: 320px;
-  }
-  .map .ymaps-2-1-79-balloon__content {
-    max-width: 300px;
   }
 }
 

@@ -20,14 +20,19 @@
     display: none !important;
   }
 
+  // @media (min-width: 401px) and (max-width: 767px) {
+  //   .ymaps-2-1-79-balloon__content {
+  //     max-width: 200px;
+  //     padding-right: 15px;
+  //   }
+  // }
+
   @media (max-width: 767px) {
     height: 320px;
 
     iframe {
       height: 320px;
     }
-    .ymaps-2-1-79-balloon__content {
-      max-width: 300px;
-    }
+
   }
 }
