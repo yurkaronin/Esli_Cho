@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         zoom: 17
       });
 
-      let placemarRkschool = new ymaps.Placemark([45.100281810026644, 38.982007807675366], {
+      let placeMark = new ymaps.Placemark([45.100281810026644, 38.982007807675366], {
         hintContent: 'Сервисный центр',
         balloonContentHeader: 'Сервисный центр ЕСЛИ ЧЁ',
         balloonContentFooter: 'Краснодар, Прикубанский округ, ул.Дзержинского, 100в (район ТЦ Красная площадь, напротив KFC)'
@@ -133,17 +133,15 @@ document.addEventListener("DOMContentLoaded", () => {
       map.controls.remove('typeSelector');
       map.behaviors.disable(['scrollZoom']);
 
-      map.geoObjects.add(placemarRkschool);
+      map.geoObjects.add(placeMark);
 
-      if (placemarRkschool && placemarRkschool.events) {
-        placemarRkschool.events.add('mouseenter', function (e) {
-          e.get('target').options.set('iconImageHref', './img/map/balun-hover.svg');
-        });
+      placeMark.add('mouseenter', function (e) {
+        e.get('target').options.set('iconImageHref', './img/map/balun-hover.svg');
+      });
 
-        placemarRkschool.events.add('mouseleave', function (e) {
-          e.get('target').options.set('iconImageHref', './img/map/balun.svg');
-        });
-      };
+      placeMark.add('mouseleave', function (e) {
+        e.get('target').options.set('iconImageHref', './img/map/balun.svg');
+      });
     }
 
     ymaps.ready(init);

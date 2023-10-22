@@ -1,0 +1,55 @@
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__item:not(:last-of-type) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.5s;
+    background-color: var(--black);
+    position: relative;
+    border: 1px solid transparent;
+    outline: none;
+
+    &:focus,
+    &:hover {
+      &.vkontakte {
+        background-color: #127fff;
+      }
+      &.rutube {
+        background-color: #1e3279;
+      }
+      &.instagram {
+        background-color: #972399;
+      }
+      &.telegram {
+        background-color: #3cb9ff;
+      }
+    }
+    &:focus {
+      border-color: var(--white);
+    }
+  }
+
+  img {
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+    position: absolute;
+    pointer-events: none;
+  }
+}
