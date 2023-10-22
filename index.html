@@ -9,6 +9,16 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#2968ff">
+  <link rel="shortcut icon" href="./favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2968ff">
+  <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+  <meta name="theme-color" content="#2968ff">
+
   <link rel="preload" href="./fonts/OpenSans/OpenSans-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/OpenSans/OpenSans-Regular.woff2" as="font" type="font/woff2"
     crossorigin="anonymous">
@@ -395,81 +405,108 @@
             <div class="form__grid">
               <input class="form__item" type="text" name="user-name" placeholder="Ваше имя">
               <input class="form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона">
-              <p class="form__text">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки персональных данных</a></p>
+              <p class="form__text">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки персональных
+                  данных</a></p>
               <button class="button"><span>Получить скидку 20%</span></button>
             </div>
           </form>
         </div>
       </div>
     </section>
+
+
     <section class="advantages section" id="anchor-advantages">
-      <h2 class="title"><span>8 объективных причин,</span>чтобы отремонтировать телефон у нас</h2>
-      <ul>
-        <li>
-          <img src="./img/features/1.svg" width="70">
-          <h3>Точно определяем неисправность</h3>
-          <p>Программная и аппаратная диагностика. Аттестованные специалисты, опыт
-            5-8 лет. На 100% точное выявление неисправностей. Можете отдать телефон на независимую экспертизу и
-            убедиться в этом.</p>
-        </li>
-        <li>
-          <img src="./img/features/2.svg" width="70">
-          <h3>Без навязывания запчастей</h3>
-          <p>По итогам диагностики вы получаете заключение о неисправности
-            и варианты ремонта (оригинальные запчасти или заводская копия, программный ремонт). Никаких лишних, ненужных
-            запчастей!</p>
-        </li>
-        <li>
-          <img src="./img/features/3.svg" width="70">
-          <h3>Без подорожания</h3>
-          <p>Стоимость ремонта вы знаете заранее. Согласованная сумма совпадает с финальной! Если что-то не учли –
-            делаем за свой счет, а не за счет клиента.</p>
-        </li>
-        <li>
-          <img src="./img/features/4.svg" width="70">
-          <h3>Проверенные запчасти</h3>
-          <p>Предъявим упаковку товара, покажем маркировку на самой запчасти. Хотите удешевить ремонт? Качественные
-            фабричные копии проверенных поставщиков тоже в наличии.</p>
-        </li>
-        <li>
-          <img src="./img/features/5.svg" width="70">
-          <h3>Получаете больше, чем ожидали</h3>
-          <p>Искренне любим свою работу. Часто бесплатно выполняем дополнительную сопутствующую
-            работу. Ставим стекло - можем подпаять зарядку, почистить от загрязнений.</p>
-        </li>
-        <li>
-          <img src="./img/features/6.svg" width="70">
-          <h3>Порядок в сервисном центре</h3>
-          <p>Это значит, что ваш телефон не потеряют, случайно не перепутают запчасти, как бывает у тех, кто не следит
-            за порядком.</p>
-        </li>
-        <li>
-          <img src="./img/features/7.svg" width="70">
-          <h3>Гарантия до 12 месяцев</h3>
-          <p>Официальная письменная гарантия до 12 месяцев.</p>
-        </li>
-        <li>
-          <img src="./img/features/8.svg" width="70">
-          <h3>Быстрый ремонт - от 20 минут</h3>
-          <p>Большинство поломок устраняем прямо на ваших глазах. Например, на замену стекла на iPhone уйдет менее 20
-            минут.</p>
-        </li>
-      </ul>
-      <h3>Нужен ремонт телефона? </h3>
-      <a href="#modal-sign-for-diagnostics">Жми сюда</a>
+
+      <div class="advantages__main">
+        <div class="wrapper">
+          <h2 class="title"><span>8 объективных причин,</span>чтобы отремонтировать телефон у нас</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <img class="advantages__icon" src="./img/features/1.svg" width="70">
+              <h3 class="advantages__name">Точно определяем неисправность</h3>
+              <p class="advantages__text">Программная и аппаратная диагностика. Аттестованные специалисты, опыт
+                5-8 лет. На 100% точное выявление неисправностей. Можете отдать телефон на независимую экспертизу и
+                убедиться в этом.</p>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__icon" src="./img/features/2.svg" width="70">
+              <h3 class="advantages__name">Без навязывания запчастей</h3>
+              <p class="advantages__text">По итогам диагностики вы получаете заключение о неисправности
+                и варианты ремонта (оригинальные запчасти или заводская копия, программный ремонт). Никаких лишних,
+                ненужных
+                запчастей!</p>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__icon" src="./img/features/3.svg" width="70">
+              <h3 class="advantages__name">Без подорожания</h3>
+              <p class="advantages__text">Стоимость ремонта вы знаете заранее. Согласованная сумма совпадает с
+                финальной!
+                Если что-то не учли –
+                делаем за свой счет, а не за счет клиента.</p>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__icon" src="./img/features/4.svg" width="70">
+              <h3>Проверенные запчасти</h3>
+              <p class="advantages__text">Предъявим упаковку товара, покажем маркировку на самой запчасти. Хотите
+                удешевить
+                ремонт? Качественные
+                фабричные копии проверенных поставщиков тоже в наличии.</p>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__icon" src="./img/features/5.svg" width="70">
+              <h3 class="advantages__name">Получаете больше, чем ожидали</h3>
+              <p class="advantages__text">Искренне любим свою работу. Часто бесплатно выполняем дополнительную
+                сопутствующую
+                работу. Ставим стекло - можем подпаять зарядку, почистить от загрязнений.</p>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__icon" src="./img/features/6.svg" width="70">
+              <h3 class="advantages__name">Порядок в сервисном центре</h3>
+              <p class="advantages__text">Это значит, что ваш телефон не потеряют, случайно не перепутают запчасти, как
+                бывает у тех, кто не следит
+                за порядком.</p>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__icon" src="./img/features/7.svg" width="70">
+              <h3 class="advantages__name">Гарантия до 12 месяцев</h3>
+              <p class="advantages__text">Официальная письменная гарантия до 12 месяцев.</p>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__icon" src="./img/features/8.svg" width="70">
+              <h3 class="advantages__name">Быстрый ремонт - от 20 минут</h3>
+              <p class="advantages__text">Большинство поломок устраняем прямо на ваших глазах. Например, на замену
+                стекла
+                на
+                iPhone уйдет менее 20
+                минут.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="advantages__footer">
+        <div class="wrapper">
+          <div class="advantages__flex">
+            <h3 class="advantages__title">Нужен ремонт телефона? </h3>
+            <a class="button" href="#modal-sign-for-diagnostics"><span>Жми сюда</span></a>
+          </div>
+        </div>
+      </div>
+
     </section>
+
     <section class="contacts" id="anchor-contacts">
       <h2 class="title"><span>Контакты</span></h2>
       <ul>
         <li>
-          <img src="./img/icons/location.svg" width="24">
+          <img class="advantages__icon" src="./img/icons/location.svg" width="24">
           <span>Адрес:</span>
           <address>Краснодар, Прикубанский округ, ул.Дзержинского, 100в
             (район ТЦ Красная площадь, напротив KFC)</address>
         </li>
 
         <li>
-          <img src="./img/icons/time.svg" width="24">
+          <img class="advantages__icon" src="./img/icons/time.svg" width="24">
           <span>Время работы:</span>
           без выходных с ПН по ВС, с 9:00-22:00
         </li>
@@ -481,7 +518,7 @@
         </li>
 
         <li>
-          <img src="./img/icons/email.svg" width="24">
+          <img class="advantages__icon" src="./img/icons/email.svg" width="24">
           <span>Электронная почта:</span>
           <a href="mailto:servisesliche@gmail.com">servisesliche@gmail.com</a>
         </li>
