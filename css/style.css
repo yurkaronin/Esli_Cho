@@ -295,6 +295,7 @@ input[type=radio].visually-hidden {
   text-align: center;
   color: var(--black);
   font-size: 34px;
+  line-height: 1.2;
   font-weight: 300;
 }
 .title span {
