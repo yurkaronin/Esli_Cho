@@ -163,7 +163,6 @@ input[type=radio].visually-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: -moz-max-content;
   max-width: max-content;
   border: none;
   font-style: normal;
@@ -655,8 +654,7 @@ input[type=radio].visually-hidden {
 .social-list img {
   display: block;
   flex-shrink: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: absolute;
   pointer-events: none;
 }
@@ -710,7 +708,6 @@ input[type=radio].visually-hidden {
 }
 @media (max-width: 767px) {
   .header .logotype {
-    max-width: -moz-max-content;
     max-width: max-content;
   }
   .header .logotype__text {
@@ -904,7 +901,6 @@ input[type=radio].visually-hidden {
 }
 
 .services .button {
-  max-width: -moz-max-content;
   max-width: max-content;
   margin: 0 auto;
 }
@@ -918,8 +914,7 @@ input[type=radio].visually-hidden {
 }
 .services__center-photo {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .services__list {
   list-style: none;
@@ -953,10 +948,8 @@ input[type=radio].visually-hidden {
   width: 90px;
   height: 90px;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -1256,12 +1249,10 @@ input[type=radio].visually-hidden {
 }
 .map img {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
-  -o-object-position: center;
-     object-position: center;
+  object-position: center;
   position: absolute;
   z-index: 0;
 }
@@ -1291,12 +1282,16 @@ input[type=radio].visually-hidden {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s, visibility 0.5s;
+  background-color: rgba(0, 0, 0, 0.5411764706);
+  pointer-events: initial;
+  visibility: visible;
+  opacity: 1;
 }
 .modal__grid {
   border-radius: 20px;
   background: var(--white);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-  padding: 55px 45px 70px;
+  padding: 55px 65px 80px;
   max-width: 1160px;
   width: 100%;
   position: relative;
@@ -1306,23 +1301,37 @@ input[type=radio].visually-hidden {
 }
 .modal__close {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 24px;
+  right: 24px;
+  border: none;
+  background-color: transparent;
 }
 .modal .title {
   font-weight: 700;
   text-align: left;
-  font-size: 25px;
+  font-size: 34px;
   margin-bottom: 15px;
   text-wrap: balance;
 }
 .modal .text {
   text-align: left;
-  font-size: 14px;
+  font-size: 18px;
   text-wrap: balance;
 }
 .modal .form__item {
   border: 1px solid var(--gray4);
+}
+@media (max-width: 1200px) {
+  .modal__grid {
+    grid-template-columns: 1fr 2fr;
+  }
+  .modal .title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .modal .text {
+    font-size: 14px;
+  }
 }
 
 .map {
@@ -1331,12 +1340,10 @@ input[type=radio].visually-hidden {
 }
 .map img {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
-  -o-object-position: center;
-     object-position: center;
+  object-position: center;
   position: absolute;
   z-index: 0;
 }
@@ -1465,12 +1472,16 @@ input[type=radio].visually-hidden {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s, visibility 0.5s;
+  background-color: rgba(0, 0, 0, 0.5411764706);
+  pointer-events: initial;
+  visibility: visible;
+  opacity: 1;
 }
 .modal__grid {
   border-radius: 20px;
   background: var(--white);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-  padding: 55px 45px 70px;
+  padding: 55px 65px 80px;
   max-width: 1160px;
   width: 100%;
   position: relative;
@@ -1480,23 +1491,37 @@ input[type=radio].visually-hidden {
 }
 .modal__close {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 24px;
+  right: 24px;
+  border: none;
+  background-color: transparent;
 }
 .modal .title {
   font-weight: 700;
   text-align: left;
-  font-size: 25px;
+  font-size: 34px;
   margin-bottom: 15px;
   text-wrap: balance;
 }
 .modal .text {
   text-align: left;
-  font-size: 14px;
+  font-size: 18px;
   text-wrap: balance;
 }
 .modal .form__item {
   border: 1px solid var(--gray4);
+}
+@media (max-width: 1200px) {
+  .modal__grid {
+    grid-template-columns: 1fr 2fr;
+  }
+  .modal .title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .modal .text {
+    font-size: 14px;
+  }
 }
 
 .scroll .navigation {
@@ -1534,4 +1559,4 @@ input[type=radio].visually-hidden {
 .menu-open .navigation {
   opacity: 1;
   visibility: initial;
-}/*# sourceMappingURL=style.css.map */
+}
