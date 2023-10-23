@@ -61,7 +61,7 @@
             </svg>
             <span class="phone__text">8 (900) 268-08-08</span>
           </a>
-          <a href="#modal-call-back" class="header__callback button button--mod"><span>Заказать обратный
+          <a href="#" class="header__callback button button--mod" data-target="modal-call-back"><span>Заказать обратный
               звонок</span></a>
           <button class="button-menu button" type="button">
             <span class="button-menu__toggle"></span>
@@ -404,8 +404,8 @@
           </div>
           <form class="form" action="">
             <div class="form__grid">
-              <input class="form__item" type="text" name="user-name" placeholder="Ваше имя">
-              <input class="form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона">
+              <input class="form__item" type="text" name="user-name" placeholder="Ваше имя" required>
+              <input class="form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона" required>
               <p class="form__text">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки персональных
                   данных</a></p>
               <button class="button"><span>Получить скидку 20%</span></button>
@@ -416,7 +416,6 @@
     </section>
 
     <section class="advantages section" id="anchor-advantages">
-
       <div class="advantages__main">
         <div class="wrapper">
           <h2 class="title"><span>8 объективных причин,</span>чтобы отремонтировать телефон у нас</h2>
@@ -533,6 +532,7 @@
       <div class="map__content js-map"></div>
 
     </section>
+
   </main>
 
   <footer class="footer">
@@ -589,7 +589,7 @@
 
   <section class="modal" id="modal-call-back">
     <div class="wrapper">
-      <div class="modal__grid">
+      <div class="modal__flex">
         <div class="modal__head">
           <h2 class="title">Заказать обратный звонок</h2>
           <p class="text">Оставьте ваши контактные данные и наш специалист свяжется с вами для консультации.</p>
@@ -597,8 +597,8 @@
         <div class="modal__body">
           <form class="form" action="">
             <div class="form__grid">
-              <input class="form__item" type="text" name="user-name" placeholder="Ваше имя">
-              <input class="form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона">
+              <input class="form__item" type="text" name="user-name" placeholder="Ваше имя" required>
+              <input class="form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона" required>
               <p class="form__text">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки персональных
                   данных</a></p>
               <button class="button"><span>Оставить заявку</span></button>
@@ -614,19 +614,37 @@
         </button>
       </div>
     </div>
-
   </section>
 
-  <!-- <section class="modal" id="modal-sign-for-diagnostics">
-    <h2 class="title">Записаться на диагностику бесплатно</h2>
-    <p class="text">Оставьте ваши контактные данные и наш специалист свяжется с вами для подтверждения.</p>
-    <form action="">
-      <input type="text" name="user-name" placeholder="Ваше имя">
-      <input type="tel" name="user-tel" placeholder="Ваше номер телефона">
-      <p>Нажимая на кнопку, вы соглашаетесь на обработку персональных данных</p>
-      <button class="button"><span>Получить скидку</span></button>
-    </form>
-  </section> -->
+  <section class="modal" id="modal-sign-for-diagnostics">
+    <div class="wrapper">
+      <div class="modal__flex">
+        <div class="modal__head">
+          <h2 class="title">Записаться на диагностику бесплатно</h2>
+          <p class="text">Оставьте ваши контактные данные и наш специалист свяжется с вами для подтверждения.</p>
+        </div>
+        <div class="modal__body">
+          <form class="form" action="">
+            <div class="form__grid">
+              <input class="form__item" type="text" name="user-name" placeholder="Ваше имя" required>
+              <input class="form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона" required>
+              <p class="form__text">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки персональных
+                  данных</a></p>
+              <button class="button"><span>Оставить заявку</span></button>
+            </div>
+          </form>
+        </div>
+        <button class="modal__close" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M17.4016 13.5675C18.1924 14.3595 18.1924 15.6536 17.4016 16.4446L16.4425 17.403C15.6516 18.1941 14.3573 18.1941 13.5664 17.403L9.49121 13.3281L5.41636 17.403C4.62513 18.1941 3.3306 18.1941 2.53976 17.403L1.58101 16.4446C0.789778 15.6536 0.789778 14.3595 1.58101 13.5675L5.65605 9.49266L1.58101 5.41777C0.789778 4.62673 0.789778 3.33175 1.58101 2.54158L2.53976 1.58227C3.3306 0.791223 4.62513 0.791223 5.41636 1.58227L9.49121 5.65715L13.5664 1.58227C14.3573 0.791223 15.6516 0.791223 16.4425 1.58227L17.4016 2.54158C18.1924 3.33175 18.1924 4.62673 17.4016 5.41777L13.3264 9.49266L17.4016 13.5675Z"
+              fill="#FA8315" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
   <a href="#anchor-header" class="button to-top" title="Перейти в начало страницы"><img src="./img/icons/arrow.svg"
       width="16"></a>
   <script src="libs/swiper-bundle.min.js"></script>
