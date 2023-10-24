@@ -2,7 +2,8 @@
   &__grid {
     display: grid;
     gap: 20px 30px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 270px 1fr;
+    align-items: center;
   }
   &__item {
     max-width: 100%;

@@ -1,6 +1,5 @@
 .advantages {
   background-color: var(--gray);
-  padding-bottom: 0;
   &__main {
     margin-bottom: 60px;
   }
@@ -16,7 +15,7 @@
     max-width: 70px;
     display: block;
     margin: 0 auto;
-    margin-bottom: 34px;
+    margin-bottom: 35px;
   }
   &__item {
     display: flex;
@@ -36,6 +35,7 @@
   &__text {
     margin: 0;
     text-wrap: balance;
+    line-height: 1.5;
   }
 
   &__flex {
@@ -66,6 +66,7 @@
     }
   }
   @media (max-width: 767px) {
+    padding-bottom: 0;
     &__list {
       grid-template-columns: repeat(1, 1fr);
     }

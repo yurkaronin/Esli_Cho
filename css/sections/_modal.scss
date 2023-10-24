@@ -61,12 +61,14 @@
     margin: 0;
   }
   .form__grid {
-    grid-template-columns: 270px 1fr;
     gap: 20px;
   }
   .form__item {
     border: 1px solid var(--gray4);
     color: var(--dark);
+  }
+  .form__item--mod {
+    grid-column: 1/3;
   }
   .form__text {
     grid-column: initial !important;

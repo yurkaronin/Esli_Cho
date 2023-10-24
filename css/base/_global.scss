@@ -53,6 +53,9 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+textarea {
+  resize: vertical;
+}
 
 input[type="number"] {
   -moz-appearance: textfield;

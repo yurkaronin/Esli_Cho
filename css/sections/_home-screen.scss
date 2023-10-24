@@ -4,8 +4,8 @@
   background-position: right top;
   background-size: cover;
   color: var(--white);
-  padding-top: 190px;
-  padding-bottom: 125px;
+  padding-top: 120px;
+  padding-bottom: 95px;
   &__list {
     margin: 0;
     padding: 0;
@@ -15,13 +15,15 @@
     grid-template-columns: repeat(2, 1fr);
     max-width: 755px;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 27px;
   }
   &__item {
     display: flex;
     align-items: flex-start;
     font-size: 16px;
+    line-height: 1.5;
     padding-right: 80px;
+    text-wrap: balance;
     &::before {
       margin-top: 6px;
       flex-shrink: 0;
@@ -46,6 +48,9 @@
       color: var(--blue);
       font-weight: inherit;
     }
+  }
+  .button {
+    padding-inline: 73px;
   }
 
   @media (max-width: 1399px) {

@@ -2,6 +2,7 @@
   .button {
     max-width: max-content;
     margin: 0 auto;
+    padding-inline: 72px;
   }
   &__grid {
     display: grid;
@@ -41,6 +42,7 @@
       font-weight: 400;
       display: block;
       text-transform: initial;
+      margin-top: 9px;
     }
   }
   &__image {

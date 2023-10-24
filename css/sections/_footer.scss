@@ -10,7 +10,7 @@
   }
   &__item:last-of-type {
     grid-column: 1/4;
-    margin-top: 50px;
+    margin-top: 60px;
   }
   &__copyright {
     margin: 0;
@@ -20,7 +20,7 @@
   &__title {
     display: block;
     margin: 0;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     color: var(--blue);
     font-size: 18px;
     font-weight: 700;
@@ -28,7 +28,9 @@
   &__text {
     margin: 0;
     font-size: 14px;
+    line-height: 1.6;
     max-width: 315px;
+    text-wrap: balance;
     & + * {
       margin-top: 20px;
     }
@@ -38,7 +40,7 @@
     max-width: 270px;
   }
   .logotype__image {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .logotype__text {
     color: var(--blue);

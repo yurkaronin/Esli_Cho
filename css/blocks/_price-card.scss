@@ -22,7 +22,7 @@
   &__container {
     padding-top: 30px;
     padding-inline: 70px;
-    padding-bottom: 83px;
+    padding-bottom: 50px;
   }
   &__table {
     color: var(--black);
@@ -36,8 +36,7 @@
     }
 
     td {
-      padding: 10px 0;
-      // border-bottom: 1px solid var(--gray2);
+      padding: 11px 0 10px;
       width: 75%;
     }
     td:last-of-type {
@@ -46,10 +45,6 @@
       padding-left: 3%;
       width: 25%;
     }
-    // tr:nth-child(even) {
-    //   background-color: var(--gray);
-    //   border-color: var(--gray);
-    // }
   }
 
   @media (max-width: 1200px) {
