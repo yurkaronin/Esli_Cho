@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastKnownScrollY = 0;
   let ticking = false;
 
-  // console.log(lastKnownScrollY);
-  // console.log(ticking);
+  console.log(lastKnownScrollY);
+  console.log(ticking);
 
   function headerChange() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -171,13 +171,13 @@ window.addEventListener("scroll", handleScrollButtonVisibility, { passive: true 
 
       map.geoObjects.add(placeMark);
 
-      placeMark.add('mouseenter', function (e) {
+      placeMark.events.add('mouseenter', function (e) {
         e.get('target').options.set('iconImageHref', './img/map/balun-hover.svg');
-      });
+    });
 
-      placeMark.add('mouseleave', function (e) {
+    placeMark.events.add('mouseleave', function (e) {
         e.get('target').options.set('iconImageHref', './img/map/balun.svg');
-      });
+    });
     }
 
     ymaps.ready(init);
