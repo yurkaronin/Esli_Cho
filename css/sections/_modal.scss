@@ -18,23 +18,35 @@
   background-color: rgb(0 0 0 / 73%);
   z-index: 9999;
 
-  &__flex {
+  &__body {
     border-radius: 20px;
     background: var(--white);
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
     padding: 55px 65px 80px;
-    max-width: 1160px;
+    max-width: 790px;
     width: 100%;
     position: relative;
-    display: flex;
-    align-items: flex-start;
+    margin: 0 auto;
   }
-  &__head {
-    max-width: 320px;
-    margin-right: 50px;
+  .custom-form__grid {
+    grid-template-columns: 1fr;
   }
-  &__body {
-    flex-grow: 2;
+  .custom-form__item {
+    color: var(--black);
+  }
+  .custom-form__confirm {
+    order: initial;
+    grid-column: initial;
+  }
+  .title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .text{
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 24px;
   }
   &__close {
     position: absolute;
@@ -46,98 +58,27 @@
     padding: 0;
   }
 
-  .title {
-    font-weight: 700;
-    text-align: left;
-    font-size: 34px;
-    margin-bottom: 15px;
-    text-wrap: balance;
-  }
-  .text {
-    text-align: left;
-    font-size: 18px;
-    text-wrap: balance;
-    margin: 0;
-  }
-  .form__grid {
-    gap: 20px;
-  }
-  .form__item {
-    border: 1px solid var(--gray4);
-    color: var(--dark);
-  }
-  .form__item--mod {
-    grid-column: 1/3;
-  }
-  .form__text {
-    grid-column: initial !important;
-    font-size: 12px !important;
-    order: 4 !important;
+  .custom-form__item {
+    border-color: var(--gray4);
   }
 
+
   @media (max-width: 1200px) {
-    &__flex {
+    &__body {
       padding: 55px 45px 70px;
     }
 
-    &__head {
-      max-width: 235px;
-      margin-right: 30px;
-    }
-    .form__grid {
-      grid-template-columns: 235px 1fr;
-      gap: 20px 30px;
-    }
-    .title {
-      font-size: 25px;
-      margin-bottom: 15px;
-    }
-    .text {
-      font-size: 14px;
-    }
 
   }
   @media (max-width: 1023px) {
-    &__flex {
+    &__body {
       display: block;
       padding: 40px 30px 50px;
     }
-    &__head {
-      max-width: 100%;
-      margin-right: 0;
-      margin-bottom: 30px;
-    }
-    .form__grid {
-      grid-template-columns: 245px 1fr;
-      gap: 20px 32px;
-    }
-    .title {
-      font-size: 28px;
-      margin-bottom: 25px;
-      text-align: center;
-    }
-    .text {
-      font-size: 16px;
-      text-align: center;
-    }
   }
   @media (max-width: 767px) {
-    &__flex {
+    &__body {
       padding: 32px 40px 35px;
-    }
-    .form__grid {
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
-    &__head {
-      margin-bottom: 32px;
-    }
-    .title {
-      font-size: 22px;
-      margin-bottom: 20px;
-    }
-    .text {
-      font-size: 14px;
     }
   }
 }

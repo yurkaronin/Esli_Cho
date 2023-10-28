@@ -111,7 +111,8 @@
           </ul>
         </div>
 
-        <a href="#" class="button button--big" data-target="modal-sign-for-diagnostics"><span>Записаться на диагностику</span></a>
+        <a href="#" class="button button--big" data-target="modal-sign-for-diagnostics"><span>Записаться на
+            диагностику</span></a>
 
       </div>
     </section>
@@ -210,7 +211,8 @@
             </li>
           </ul>
         </div>
-        <a href="#" class="button button--big" data-target="modal-sign-for-diagnostics"><span>Записаться на диагностику</span></a>
+        <a href="#" class="button button--big" data-target="modal-sign-for-diagnostics"><span>Записаться на
+            диагностику</span></a>
       </div>
     </section>
 
@@ -399,19 +401,22 @@
     <section class="sale section" id="anchor-sale">
       <div class="wrapper">
         <div class="sale__grid">
-          <div class="sale__text">
+          <div class="sale__left">
             <h2 class="title"><span>Скидка 20%</span> на работы по ремонту телефона</h2>
             <p class="text">Скидка действует только при заявке с сайта</p>
           </div>
-          <form class="form" action="">
-            <div class="form__grid">
-              <input class="form__item" type="text" name="user-name" placeholder="Ваше имя" required>
-              <input class="form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона" required>
-              <p class="form__text">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки персональных
-                  данных</a></p>
-              <button class="button"><span>Получить скидку 20%</span></button>
-            </div>
-          </form>
+          <div class="sale__right">
+            <form class="custom-form" action="">
+              <div class="custom-form__grid">
+                <input class="custom-form__item" type="text" name="user-name" placeholder="Ваше имя" required>
+                <input class="custom-form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона" required>
+                <p class="custom-form__confirm">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки
+                    персональных
+                    данных</a></p>
+                <button class="custom-form__button button"><span>Получить скидку 20%</span></button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -590,22 +595,20 @@
 
   <section class="modal" id="modal-call-back">
     <div class="wrapper">
-      <div class="modal__flex">
-        <div class="modal__head">
-          <h2 class="title">Заказать обратный звонок</h2>
-          <p class="text">Оставьте ваши контактные данные и наш специалист свяжется с вами для консультации.</p>
-        </div>
-        <div class="modal__body">
-          <form class="form" action="">
-            <div class="form__grid">
-              <input class="form__item" type="text" name="user-name" placeholder="Ваше имя" required>
-              <input class="form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона" required>
-              <p class="form__text">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки персональных
-                  данных</a></p>
-              <button class="button"><span>Заказать звонок</span></button>
-            </div>
-          </form>
-        </div>
+
+      <div class="modal__body">
+        <h2 class="title">Заказать обратный звонок</h2>
+        <p class="text">Оставьте ваши контактные данные и наш специалист свяжется с вами для консультации.</p>
+        <form class="custom-form" action="">
+          <div class="custom-form__grid">
+            <input class="custom-form__item" type="text" name="user-name" placeholder="Ваше имя" required>
+            <input class="custom-form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона" required>
+            <p class="custom-form__confirm">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки
+                персональных
+                данных</a></p>
+            <button class="custom-form__button button"><span>Оставить заявку</span></button>
+          </div>
+        </form>
         <button class="modal__close" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -614,29 +617,43 @@
           </svg>
         </button>
       </div>
+
+
     </div>
   </section>
 
   <section class="modal" id="modal-sign-for-diagnostics">
     <div class="wrapper">
-      <div class="modal__flex">
-        <div class="modal__head">
-          <h2 class="title">Записаться на диагностику</h2>
-          <p class="text">Оставьте ваши контактные данные и наш специалист свяжется с вами для подтверждения.</p>
-        </div>
-        <div class="modal__body">
-          <form class="form" action="">
-            <div class="form__grid">
-              <input class="form__item" type="text" name="user-name" placeholder="Ваше имя" required>
-              <input class="form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона" required>
-              <textarea class="form__item form__item--mod" name="user-text" placeholder="Ваш текст..."
-                rows="1"></textarea>
-              <p class="form__text">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки персональных
-                  данных</a></p>
-              <button class="button"><span>Записаться</span></button>
-            </div>
-          </form>
-        </div>
+
+      <div class="modal__body">
+        <h2 class="title">Записаться на диагностику</h2>
+        <p class="text">Оставьте ваши контактные данные и наш специалист свяжется с вами для консультации.</p>
+        <form class="custom-form" action="">
+          <div class="custom-form__grid">
+
+            <select class="custom-form__item new-select" name="phone-model" id="phone-model">
+              <option value="" selected>Выберите модель</option>
+              <option value="iphone-13">iPhone 13</option>
+              <option value="samsung-galaxy-s21">Samsung Galaxy S21</option>
+              <option value="google-pixel-6">Google Pixel 6</option>
+              <option value="oneplus-9">OnePlus 9</option>
+              <option value="xiaomi-mi-11">Xiaomi Mi 11</option>
+              <option value="oppo-find-x3">Oppo Find X3</option>
+            </select>
+
+            <input class="custom-form__item" type="text" name="user-name" placeholder="Ваше имя" required>
+
+            <input class="custom-form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона" required>
+
+            <textarea class="custom-form__item custom-form__item--mod" name="user-text" placeholder="Ваш текст..."
+              rows="1"></textarea>
+            <p class="custom-form__confirm">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки
+                персональных
+                данных</a></p>
+
+            <button class="custom-form__button button" type="submit"><span>Оставить заявку</span></button>
+          </div>
+        </form>
         <button class="modal__close" type="button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -645,8 +662,11 @@
           </svg>
         </button>
       </div>
+
+
     </div>
   </section>
+
 
   <a href="#anchor-header" class="button to-top" title="Перейти в начало страницы"><img src="./img/icons/arrow.svg"
       width="16"></a>

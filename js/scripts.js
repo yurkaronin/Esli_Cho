@@ -92,15 +92,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollBtn = document.querySelector('.to-top');
 
     if (scrollTop > window.innerHeight) { // Если пользователь проскроллил ниже первого экрана
-        scrollBtn.style.display = 'flex';
+      scrollBtn.style.display = 'flex';
     } else {
-        scrollBtn.style.display = 'none';
+      scrollBtn.style.display = 'none';
     }
-}
+  }
 
-// вызов функции для начального состояния
-handleScrollButtonVisibility();
-window.addEventListener("scroll", handleScrollButtonVisibility, { passive: true });
+  // вызов функции для начального состояния
+  handleScrollButtonVisibility();
+  window.addEventListener("scroll", handleScrollButtonVisibility, { passive: true });
 
   // показ мобильного меню и кнопки
   const buttonMenu = document.querySelector('.button-menu');
@@ -173,11 +173,11 @@ window.addEventListener("scroll", handleScrollButtonVisibility, { passive: true 
 
       placeMark.events.add('mouseenter', function (e) {
         e.get('target').options.set('iconImageHref', './img/map/balun-hover.svg');
-    });
+      });
 
-    placeMark.events.add('mouseleave', function (e) {
+      placeMark.events.add('mouseleave', function (e) {
         e.get('target').options.set('iconImageHref', './img/map/balun.svg');
-    });
+      });
     }
 
     ymaps.ready(init);
@@ -193,7 +193,7 @@ window.addEventListener("scroll", handleScrollButtonVisibility, { passive: true 
     // Добавление слушателя клика на весь документ.
     document.addEventListener('click', function listener(event) {
       // Проверка, был ли клик за пределами диалогового окна или на кнопку закрытия.
-      if (!event.target.closest('.modal__flex') || event.target.closest('.modal__close')) {
+      if (!event.target.closest('.modal__body') || event.target.closest('.modal__close')) {
         // Удаление класса у элемента body.
         document.body.classList.remove(targetClass);
         targetClass = null;
@@ -216,6 +216,71 @@ window.addEventListener("scroll", handleScrollButtonVisibility, { passive: true 
       setupBodyClickListener();
     });
   });
+
+
+  // кастомные селекты
+  // Находим все select элементы
+  var selects = document.querySelectorAll('.new-select');
+
+  selects.forEach(function (select) {
+    // Создаем обертку для кастомного select
+    var customSelect = document.createElement('div');
+    customSelect.className = 'custom-select';
+
+    // Создаем элемент для выбранного значения
+    var selectBox = document.createElement('div');
+    selectBox.className = 'select-box';
+    selectBox.textContent = select.options[select.selectedIndex].textContent; // первоначальное значение
+    customSelect.appendChild(selectBox);
+
+    // Создаем контейнер для опций
+    var optionsContainer = document.createElement('div');
+    optionsContainer.className = 'options';
+    customSelect.appendChild(optionsContainer);
+
+    // Создаем опции
+    for (var i = 0; i < select.options.length; i++) {
+      var option = document.createElement('div');
+      option.textContent = select.options[i].textContent;
+      option.dataset.value = select.options[i].value;
+
+      // Если текущая опция является выбранной, добавьте класс
+      if (select.selectedIndex === i) {
+        option.classList.add('selected-option');
+      }
+
+      // Обновление selectBox при клике
+      option.addEventListener('click', function () {
+        selectBox.textContent = this.textContent;
+        select.value = this.dataset.value;
+
+        // Удалите класс 'selected-option' у всех опций
+        var allOptions = optionsContainer.querySelectorAll('div');
+        allOptions.forEach(function (opt) {
+          opt.classList.remove('selected-option');
+        });
+
+        // Добавьте класс 'selected-option' для выбранной опции
+        this.classList.add('selected-option');
+
+        optionsContainer.style.display = 'none';
+        customSelect.classList.remove('active');
+      });
+      optionsContainer.appendChild(option);
+    }
+
+    // Обработчик клика по selectBox
+    selectBox.addEventListener('click', function () {
+      optionsContainer.style.display =
+        optionsContainer.style.display === 'block' ? 'none' : 'block';
+      customSelect.classList.toggle('active');
+    });
+
+    // Вставляем кастомный select перед оригинальным и скрываем оригинальный
+    select.parentNode.insertBefore(customSelect, select);
+    select.style.display = 'none';
+  });
+
 
 
 });

@@ -49,4 +49,9 @@
   &.isActive span:after {
     transform: rotate(45deg);
   }
+
+  @media (max-width: 374px) {
+    width: 45px;
+    height: 45px;
+  }
 }

@@ -51,6 +51,16 @@
   &--big {
     min-width: 365px;
   }
+  &--reset {
+    color: var(--gray4);
+    font-weight: 400;
+  }
+  &--reset::before {
+    background-color: transparent;
+    // border: 1px solid var(--gray4);
+    opacity: 0.7;
+
+  }
 
   &:hover::before {
     left: -4px;

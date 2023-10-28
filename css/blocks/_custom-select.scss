@@ -1,0 +1,78 @@
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  color: var(--gray4);
+  font-family: var(--OpenSans);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  z-index: 99;
+}
+
+.select-box {
+  position: relative;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 40px;
+  border: 1px solid var(--gray4);
+  padding: 19px 24px;
+  display: flex;
+  align-items: center;
+  color: var(--gray4);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.select-box::after {
+  content: "";
+  display: block;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.96218 10C8.78571 10 8.62815 9.9321 8.4895 9.7963L0.283615 1.83333C0.0945396 1.68518 -6.55671e-08 1.5 -5.58534e-08 1.27778C-4.82984e-08 1.10494 0.0693283 0.950617 0.207983 0.814814L0.907564 0.148147C1.0084 0.049382 1.12185 -7.37767e-07 1.2479 -7.32258e-07C1.41176 -7.25095e-07 1.60714 0.11111 1.83403 0.333333L8.94328 7.22222L16.0714 0.425926C16.2983 0.203704 16.4937 0.0925927 16.6576 0.0925927C16.7836 0.0925927 16.916 0.160494 17.0546 0.296296L17.8109 1.03704C17.937 1.16049 18 1.27778 18 1.38889C18 1.46296 17.9622 1.54321 17.8866 1.62963C17.8109 1.72839 17.7227 1.82716 17.6218 1.92593L9.56723 9.7037C9.36554 9.90123 9.16386 10 8.96218 10Z' fill='%233D3D3D'/%3e%3c/svg%3e ");
+  width: 20px;
+  height: 11px;
+  background-size: 20px;
+  transition: transform 0.3s ease;
+  transform: var(--bs-accordion-btn-icon-transform);
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--gray4);
+  overflow: hidden;
+}
+
+.options div {
+  padding: 16px 24px;
+  cursor: pointer;
+  &:not(:first-of-type) {
+    border-top: 1px solid var(--gray4);
+  }
+}
+
+.selected-option {
+  background-color: var(--gray2);
+  color: var(--black);
+}
+.options div:hover,
+.options div:focus {
+  background-color: #eceae2;
+}
+
+.custom-select.active .select-box::after {
+  transform: rotate(-180deg);
+}
+.custom-select.active .options {
+  margin-top: 16px;
+  // padding: 16px 0;
+}

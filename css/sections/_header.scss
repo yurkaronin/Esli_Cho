@@ -46,14 +46,16 @@
     }
   }
   @media (max-width: 767px) {
-    .logotype {
-      max-width: max-content;
-    }
     .logotype__text {
       display: none;
     }
     .button-menu {
       margin-left: 10px;
   }
+  }
+  @media (max-width: 374px) {
+    .logotype__image {
+      max-width: 145px;
+    }
   }
 }
