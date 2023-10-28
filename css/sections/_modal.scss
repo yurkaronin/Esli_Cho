@@ -27,6 +27,8 @@
     width: 100%;
     position: relative;
     margin: 0 auto;
+    max-height: 90vh;
+    overflow: auto;
   }
   .custom-form__grid {
     grid-template-columns: 1fr;
@@ -43,7 +45,7 @@
     font-weight: 700;
     text-align: left;
   }
-  .text{
+  .text {
     font-size: 18px;
     text-align: left;
     margin-bottom: 24px;
@@ -62,13 +64,10 @@
     border-color: var(--gray4);
   }
 
-
   @media (max-width: 1200px) {
     &__body {
       padding: 55px 45px 70px;
     }
-
-
   }
   @media (max-width: 1023px) {
     &__body {

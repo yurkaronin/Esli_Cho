@@ -1433,6 +1433,8 @@ input[type=radio].visually-hidden {
   width: 100%;
   position: relative;
   margin: 0 auto;
+  max-height: 90vh;
+  overflow: auto;
 }
 .modal .custom-form__grid {
   grid-template-columns: 1fr;
@@ -1634,6 +1636,8 @@ input[type=radio].visually-hidden {
   width: 100%;
   position: relative;
   margin: 0 auto;
+  max-height: 90vh;
+  overflow: auto;
 }
 .modal .custom-form__grid {
   grid-template-columns: 1fr;
@@ -1730,6 +1734,9 @@ input[type=radio].visually-hidden {
   opacity: 1;
 }
 
+.modal-sign-for-diagnostics {
+  overflow: hidden;
+}
 .modal-sign-for-diagnostics #modal-sign-for-diagnostics {
   pointer-events: initial;
   visibility: visible;
