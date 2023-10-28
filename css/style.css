@@ -799,9 +799,7 @@ input[type=radio].visually-hidden {
 .header__callback {
   padding: 16px 20px;
   font-size: 14px;
-  margin-left: 40px;
-  max-width: 265px;
-  width: 100%;
+  margin-left: 30px;
 }
 .header .button-menu {
   display: none;
