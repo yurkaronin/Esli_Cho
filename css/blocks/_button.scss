@@ -48,6 +48,9 @@
       background-color: var(--black);
     }
   }
+  &--big {
+    min-width: 365px;
+  }
 
   &:hover::before {
     left: -4px;
@@ -56,8 +59,18 @@
     right: -4px;
   }
 
+  @media (max-width: 1199px) {
+    &--big {
+      min-width: 400px;
+    }
+  }
+
   @media (max-width: 767px) {
     padding: 20px 30px;
+
+    &--big {
+      min-width: initial;
+    }
   }
 
   @media (max-width: 450px) {

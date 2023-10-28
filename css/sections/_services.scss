@@ -1,8 +1,6 @@
 .services {
   .button {
-    max-width: max-content;
     margin: 0 auto;
-    padding-inline: 72px;
   }
   &__grid {
     display: grid;
@@ -103,5 +101,6 @@
     &__text {
       font-size: 14px;
     }
+    max-width: max-content;
   }
 }

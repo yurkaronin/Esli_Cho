@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 
   <title>Если Чё: сервисный центр по ремонту сотовых телефонов в Краснодаре</title>
   <meta name="description" content="">
@@ -97,17 +98,21 @@
 
     <section class="home-screen">
       <div class="wrapper">
-        <h1 class="title">Профессиональный ремонт<br>
-          телефонов, смартфонов, iPhone<br>
-          <span>от 350 руб</span> без предоплат и выходных
-        </h1>
-        <ul class="home-screen__list">
-          <li class="home-screen__item">На 100% точная диагностика – подтверждает независимая экспертиза</li>
-          <li class="home-screen__item">Без подорожания по итогу работы</li>
-          <li class="home-screen__item">Без «впаривания» ненужных запчастей</li>
-          <li class="home-screen__item">Ремонт при клиенте возможен!</li>
-        </ul>
-        <a href="#" class="button" data-target="modal-sign-for-diagnostics"><span>Записаться на диагностику</span></a>
+        <div class="home-screen__container">
+          <h1 class="title">Профессиональный ремонт<br>
+            телефонов, смартфонов, iPhone<br>
+            <span>от 350 руб</span> без предоплат и выходных
+          </h1>
+          <ul class="home-screen__list">
+            <li class="home-screen__item">На 100% точная диагностика – подтверждает независимая экспертиза</li>
+            <li class="home-screen__item">Без подорожания по итогу работы</li>
+            <li class="home-screen__item">Без «впаривания» ненужных запчастей</li>
+            <li class="home-screen__item">Ремонт при клиенте возможен!</li>
+          </ul>
+        </div>
+
+        <a href="#" class="button button--big" data-target="modal-sign-for-diagnostics"><span>Записаться на диагностику</span></a>
+
       </div>
     </section>
 
@@ -205,7 +210,7 @@
             </li>
           </ul>
         </div>
-        <a href="#" class="button" data-target="modal-sign-for-diagnostics"><span>Записаться на диагностику</span></a>
+        <a href="#" class="button button--big" data-target="modal-sign-for-diagnostics"><span>Записаться на диагностику</span></a>
       </div>
     </section>
 
@@ -624,7 +629,8 @@
             <div class="form__grid">
               <input class="form__item" type="text" name="user-name" placeholder="Ваше имя" required>
               <input class="form__item" type="tel" name="user-tel" placeholder="Ваше номер телефона" required>
-              <textarea class="form__item form__item--mod" name="user-text" placeholder="Ваш текст..." rows="1"></textarea>
+              <textarea class="form__item form__item--mod" name="user-text" placeholder="Ваш текст..."
+                rows="1"></textarea>
               <p class="form__text">Нажимая на кнопку, вы соглашаетесь с политикой <a href="#">обработки персональных
                   данных</a></p>
               <button class="button"><span>Записаться</span></button>
