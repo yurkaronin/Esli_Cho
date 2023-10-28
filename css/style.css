@@ -71,6 +71,7 @@
   --gray2: #dddddd;
   --gray3: #7e7e7e;
   --gray4: #898989;
+  --Red: #eb5757;
 }
 
 html {
@@ -649,6 +650,20 @@ input[type=radio].visually-hidden {
   font-weight: 400;
   padding: 20px 35px;
   background-color: transparent;
+}
+.custom-form__item-wrapper {
+  position: relative;
+}
+.custom-form__error-message {
+  border-color: red !important;
+  color: var(--Red);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  max-width: 100%;
 }
 .custom-form__confirm {
   margin: 0;

@@ -282,8 +282,66 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+  // валидация поля с телефоном
+  const phoneInputs = document.querySelectorAll('input[type="tel"]');
+
+  // Оборачиваем каждый input в div и добавляем блок для ошибок
+  for (let input of phoneInputs) {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('custom-form__item-wrapper');
+
+    const errorMessage = document.createElement('span');
+    errorMessage.classList.add('custom-form__error-message');
+
+    input.parentNode.insertBefore(wrapper, input);
+    wrapper.appendChild(input);
+    wrapper.appendChild(errorMessage);
+  }
+
+  // Добавляем валидацию
+  for (let input of phoneInputs) {
+    input.addEventListener('input', validatePhoneNumber);
+  }
+
+  // Проверка перед отправкой формы
+  const forms = document.querySelectorAll('form');
+  for (let form of forms) {
+    form.addEventListener('submit', function (event) {
+      for (let input of phoneInputs) {
+        if (!validatePhoneNumber(input)) {
+          event.preventDefault(); // Отменяем отправку формы
+          alert('Пожалуйста, исправьте ошибки перед отправкой формы.');
+          break;
+        }
+      }
+    });
+  }
+
 
 });
+
+function validatePhoneNumber(input) {
+  const errorMessage = input.nextElementSibling;
+  const value = input.value.replace(/\D/g, ''); // Убираем все, кроме цифр
+
+  if (input.value !== value) {
+      input.classList.add('error');
+      errorMessage.textContent = 'введите телефонный номер, а не текст';
+      return false;
+  } else if (value.length < 11 && value.length > 0) {
+      input.classList.add('error');
+      errorMessage.textContent = 'слишком короткий номер';
+      return false;
+  } else if (value.length > 11) {
+      input.classList.add('error');
+      errorMessage.textContent = 'слишком длинный номер';
+      return false;
+  } else {
+      input.classList.remove('error');
+      errorMessage.textContent = '';
+      return true;
+  }
+}
 
 
 
