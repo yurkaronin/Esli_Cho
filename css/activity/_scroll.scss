@@ -3,18 +3,6 @@
     background-color: var(--black);
     border-bottom-color: var(--black);
   }
-  .navigation__link {
-    color: var(--blue2);
-  }
-  .navigation__link:hover,
-  .navigation__link:hover,
-  .navigation__link:hover {
-    color: var(--white);
-    &::after {
-      width: 100%;
-      background-color: var(--white);
-    }
-  }
   @media (max-width: 1023px) {
     .navigation__link:hover,
     .navigation__link:hover,

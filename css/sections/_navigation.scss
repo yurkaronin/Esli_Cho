@@ -10,11 +10,14 @@
     justify-content: space-between;
     align-items: center;
   }
+  &__item--mobile {
+    display: none;
+  }
   &__link {
     padding: 16px 0;
     text-align: center;
     display: flex;
-    color: var(--blue);
+    color: var(--blue2);
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -29,17 +32,19 @@
       height: 5px;
       width: 0;
       transition: all 0.3s;
-      background-color: var(--blue);
+      background-color: var(--blue2);
     }
   }
-  &__link:hover,
-  &__link:hover,
   &__link:hover {
-    color: var(--blue2);
+    color: var(--white);
+  }
+
+  &__link:active,
+  &__link:focus {
+    color: var(--white);
 
     &::after {
       width: 100%;
-      background-color: var(--blue2);
     }
   }
   &__title {
@@ -51,12 +56,14 @@
     right: 0;
     border-radius: 0px 0px 0px 20px;
     background: var(--white);
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
     border-bottom: none;
     background-color: var(--white) !important;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s;
+    max-width: 375px;
+    width: 100%;
 
     &__list {
       flex-direction: column;
@@ -70,10 +77,47 @@
       font-weight: 700;
       margin-top: 7px;
       margin-bottom: 40px;
+      padding-left: 30px;
+      padding-right: 80px;
+    }
+    &__item {
+      max-width: 100%;
+      width: 100%;
+    }
+    &__item--mobile {
+      display: block;
+    }
+    &__item--mobile &__link {
+      color: var(--black);
+      font-size: 18px;
+      font-weight: 700;
+    }
+    &__link {
+      padding: 16px 30px;
+      justify-content: flex-start;
+      text-align: left;
+      max-width: 100%;
+      width: 100%;
+      color: var(--blue2);
+      &::after {
+        display: none;
+      }
+    }
+    &__link:hover {
+      color: var(--blue);
+    }
+
+    &__link:active,
+    &__link:focus {
+      color: var(--black);
+      background-color: var(--gray);
     }
 
     .wrapper {
-      padding: 10px 30px 43px;
+      padding: 10px 0 43px;
     }
+  }
+  @media (max-width: 767px) {
+    max-width: 280px;
   }
 }
