@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -51,5 +50,6 @@
     object-fit: contain;
     position: absolute;
     pointer-events: none;
+    width: 18px;
   }
 }

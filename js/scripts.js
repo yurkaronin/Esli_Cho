@@ -86,6 +86,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // показ и скрытие кнопки прокрутки в начало страницы
+  function handleScrollButtonVisibility() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollBtn = document.querySelector('.to-top');
+
+    if (scrollTop > window.innerHeight) { // Если пользователь проскроллил ниже первого экрана
+        scrollBtn.style.display = 'flex';
+    } else {
+        scrollBtn.style.display = 'none';
+    }
+}
+
+// вызов функции для начального состояния
+handleScrollButtonVisibility();
+window.addEventListener("scroll", handleScrollButtonVisibility, { passive: true });
+
   // показ мобильного меню и кнопки
   const buttonMenu = document.querySelector('.button-menu');
   const navigation = document.querySelector('.navigation');

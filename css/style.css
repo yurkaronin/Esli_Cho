@@ -167,7 +167,6 @@ input[type=radio].visually-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: -moz-max-content;
   max-width: max-content;
   border: none;
   font-style: normal;
@@ -604,9 +603,9 @@ input[type=radio].visually-hidden {
   position: fixed;
   bottom: 64px;
   right: 64px;
-  display: flex;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
   z-index: 999;
+  display: none;
 }
 .to-top img {
   display: block;
@@ -629,7 +628,6 @@ input[type=radio].visually-hidden {
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -668,10 +666,10 @@ input[type=radio].visually-hidden {
 .social-list img {
   display: block;
   flex-shrink: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: absolute;
   pointer-events: none;
+  width: 18px;
 }
 
 .header {
@@ -723,7 +721,6 @@ input[type=radio].visually-hidden {
 }
 @media (max-width: 767px) {
   .header .logotype {
-    max-width: -moz-max-content;
     max-width: max-content;
   }
   .header .logotype__text {
@@ -922,7 +919,6 @@ input[type=radio].visually-hidden {
 }
 
 .services .button {
-  max-width: -moz-max-content;
   max-width: max-content;
   margin: 0 auto;
   padding-inline: 72px;
@@ -937,8 +933,7 @@ input[type=radio].visually-hidden {
 }
 .services__center-photo {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .services__list {
   list-style: none;
@@ -973,10 +968,8 @@ input[type=radio].visually-hidden {
   width: 90px;
   height: 90px;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -1282,12 +1275,10 @@ input[type=radio].visually-hidden {
 }
 .map img {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
-  -o-object-position: center;
-     object-position: center;
+  object-position: center;
   position: absolute;
   z-index: 0;
 }
@@ -1309,7 +1300,6 @@ input[type=radio].visually-hidden {
   bottom: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -1445,12 +1435,10 @@ input[type=radio].visually-hidden {
 }
 .map img {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
-  -o-object-position: center;
-     object-position: center;
+  object-position: center;
   position: absolute;
   z-index: 0;
 }
@@ -1573,7 +1561,6 @@ input[type=radio].visually-hidden {
   bottom: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -1753,4 +1740,4 @@ input[type=radio].visually-hidden {
   pointer-events: initial;
   visibility: visible;
   opacity: 1;
-}/*# sourceMappingURL=style.css.map */
+}
