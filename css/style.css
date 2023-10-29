@@ -166,7 +166,6 @@ input[type=radio].visually-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: -moz-max-content;
   max-width: max-content;
   border: none;
   font-style: normal;
@@ -625,8 +624,7 @@ input[type=radio].visually-hidden {
 .social-list img {
   display: block;
   flex-shrink: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: absolute;
   pointer-events: none;
   width: 18px;
@@ -651,11 +649,14 @@ input[type=radio].visually-hidden {
   padding: 20px 35px;
   background-color: transparent;
 }
+.custom-form__item.error {
+  border-color: var(--Red) !important;
+  color: var(--Red) !important;
+}
 .custom-form__item-wrapper {
   position: relative;
 }
 .custom-form__error-message {
-  border-color: red !important;
   color: var(--Red);
   font-size: 12px;
   font-weight: 400;
@@ -1116,8 +1117,7 @@ input[type=radio].visually-hidden {
 }
 .services__center-photo {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .services__list {
   list-style: none;
@@ -1152,10 +1152,8 @@ input[type=radio].visually-hidden {
   width: 90px;
   height: 90px;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -1191,7 +1189,6 @@ input[type=radio].visually-hidden {
 }
 @media (max-width: 600px) {
   .services {
-    max-width: -moz-max-content;
     max-width: max-content;
   }
   .services__grid {
@@ -1447,12 +1444,10 @@ input[type=radio].visually-hidden {
 }
 .map img {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
-  -o-object-position: center;
-     object-position: center;
+  object-position: center;
   position: absolute;
   z-index: 0;
 }
@@ -1551,12 +1546,10 @@ input[type=radio].visually-hidden {
 }
 .map img {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
-  -o-object-position: center;
-     object-position: center;
+  object-position: center;
   position: absolute;
   z-index: 0;
 }
@@ -1789,4 +1782,4 @@ input[type=radio].visually-hidden {
   pointer-events: initial;
   visibility: visible;
   opacity: 1;
-}/*# sourceMappingURL=style.css.map */
+}

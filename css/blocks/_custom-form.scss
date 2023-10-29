@@ -17,12 +17,15 @@
     font-weight: 400;
     padding: 20px 35px;
     background-color: transparent;
+    &.error {
+      border-color: var(--Red) !important;
+      color: var(--Red) !important;
+    }
   }
   &__item-wrapper {
     position: relative;
   }
   &__error-message {
-    border-color: red !important;
     color: var(--Red);
     font-size: 12px;
     font-weight: 400;
